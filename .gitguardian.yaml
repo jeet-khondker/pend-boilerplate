@@ -19,6 +19,7 @@ paths-ignore:
   - .env.staging.example
   - .env.production.example
   - backend/.env.example
+  - frontend/.env.local.example
   - "**/*.example"
   - "**/*.sample"
   - "**/*.template"
