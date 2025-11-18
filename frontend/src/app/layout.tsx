@@ -1,4 +1,5 @@
 import { Open_Sans } from "next/font/google";
+import { Providers } from "@/components/Providers";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -13,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={openSans.variable}>
-      <body>{children}</body>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }
