@@ -787,12 +787,15 @@ jobs:
           FAILED_COUNT=0
           PASSED_COUNT=0
 
+          echo "Jobs Array : ${JOBS[@]}"
+
           # Count Failed & Passed Jobs
           for result in "${JOBS[@]}"; do
+            result="${result:-skipped}"
             case "$result" in
               failure) ((FAILED_COUNT++));;
               success) ((PASSED_COUNT++));;
-              skipped|""|*) :;; # Do nothing for skipped/empty or unknown
+              skipped|""|*) :;; # No Operations for skipped/empty/unknown
             esac
           done
 
