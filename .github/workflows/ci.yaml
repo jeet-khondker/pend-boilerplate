@@ -773,6 +773,9 @@ jobs:
       - name: Count Failed Jobs & Calculate Metrics
         id: metrics
         run: |
+          # Allow References to Unset Variables inside this Block
+          set +u
+
           # Define Job Results Array (from needs)
           JOBS=(
             "${{ needs.backend-tests.result }}"
@@ -788,13 +791,15 @@ jobs:
           PASSED_COUNT=0
 
           # Count Failed & Passed Jobs
-          for result in "${JOBS[@]}"; do
-            case "$result" in
-              failure) ((FAILED_COUNT++));;
-              success) ((PASSED_COUNT++));;
-              skipped|""|*) :;; # No Operations for skipped/empty/unknown
-            esac
-          done
+          if [ ${#JOBS[@]} -gt 0 ]; then
+            for result in "${JOBS[@]}"; do
+              case "$result" in
+                failure) ((FAILED_COUNT++));;
+                success) ((PASSED_COUNT++));;
+                skipped|""|*) :;;
+              esac
+            done
+          fi
 
           # Success Rate (Guard Division by Zero)
           if [ "$TOTAL_JOBS" -eq 0 ]; then
@@ -840,6 +845,9 @@ jobs:
           echo "status=$STATUS" >> $GITHUB_OUTPUT
           echo "duration_seconds=$DURATION" >> $GITHUB_OUTPUT
           echo "duration_formatted=${MINUTES}m ${SECONDS}s" >> $GITHUB_OUTPUT
+
+          # Restore Strict Unset-Checking if desired (So Remainder of Workflow runs with -u)
+          set -u
 
       - name: Failure Notification
         run: |
