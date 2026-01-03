@@ -789,8 +789,11 @@ jobs:
 
           # Count Failed & Passed Jobs
           for result in "${JOBS[@]}"; do
-            [[ "$result" == "failure" ]] && ((FAILED_COUNT++))
-            [[ "$result" == "success" ]] && ((PASSED_COUNT++))
+            case "$result" in
+              failure) ((FAILED_COUNT++));;
+              success) ((PASSED_COUNT++));;
+              skipped|""|*) :;; # Do nothing for skipped/empty or unknown
+            esac
           done
 
           # Calculate Success Rate
