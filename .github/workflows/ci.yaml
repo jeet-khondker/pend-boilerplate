@@ -773,7 +773,7 @@ jobs:
       - name: Count Failed Jobs & Calculate Metrics
         id: metrics
         run: |
-          # Define Job Results Array
+          # Define Job Results Array (from needs)
           JOBS=(
             "${{ needs.backend-tests.result }}"
             "${{ needs.frontend-tests.result }}"
@@ -787,11 +787,8 @@ jobs:
           FAILED_COUNT=0
           PASSED_COUNT=0
 
-          echo "Jobs Array : ${JOBS[@]}"
-
           # Count Failed & Passed Jobs
           for result in "${JOBS[@]}"; do
-            result="${result:-skipped}"
             case "$result" in
               failure) ((FAILED_COUNT++));;
               success) ((PASSED_COUNT++));;
@@ -799,33 +796,46 @@ jobs:
             esac
           done
 
-          # Calculate Success Rate
-          SUCCESS_RATE=$((PASSED_COUNT * 100 / TOTAL_JOBS))
-
-          # Determine Emoji Based On Failure Severity
-          if [ $FAILED_COUNT -eq 1 ]; then
-            EMOJI="⚠️"
-            STATUS="Minor Issues"
-          elif [ $FAILED_COUNT -le 3 ]; then
-            EMOJI="🔴"
-            STATUS="Multiple Failures"
+          # Success Rate (Guard Division by Zero)
+          if [ "$TOTAL_JOBS" -eq 0 ]; then
+            SUCCESS_RATE=0
           else
-            EMOJI="🚨"
-            STATUS="Critical Failure"
+            SUCCESS_RATE=$(( PASSED_COUNT * 100 / TOTAL_JOBS ))
           fi
 
-          # Calculate Execution Time
+          # Execution time: use recorded start-time or a safe fallback
           END_TIME=$(date +%s)
-          START_TIME=${{ steps.start-time.outputs.start }}
+          START_TIME="${{ steps.start-time.outputs.start }}"
+
+          # Validate START_TIME is an integer; fallback to END_TIME-600s if not set
+          if ! [[ "$START_TIME" =~ ^[0-9]+$ ]]; then
+            START_TIME=$((END_TIME - 600))
+          fi
+
           DURATION=$((END_TIME - START_TIME))
+          # Ensure non-negative integer
+          if ! [[ "$DURATION" =~ ^[0-9]+$ ]]; then
+            DURATION=0
+          fi
+
           MINUTES=$((DURATION / 60))
           SECONDS=$((DURATION % 60))
 
-          # Output All Metrics
+          # Output all metrics to GITHUB_OUTPUT
           echo "failed=$FAILED_COUNT" >> $GITHUB_OUTPUT
           echo "passed=$PASSED_COUNT" >> $GITHUB_OUTPUT
           echo "total=$TOTAL_JOBS" >> $GITHUB_OUTPUT
           echo "success_rate=$SUCCESS_RATE" >> $GITHUB_OUTPUT
+
+          # Determine Emoji & Status Based On Failure Count
+          if [ $FAILED_COUNT -eq 1 ]; then
+            EMOJI="⚠️"; STATUS="Minor Issues"
+          elif [ $FAILED_COUNT -le 3 ]; then
+            EMOJI="🔴"; STATUS="Multiple Failures"
+          else
+            EMOJI="🚨"; STATUS="Critical Failure"
+          fi
+
           echo "emoji=$EMOJI" >> $GITHUB_OUTPUT
           echo "status=$STATUS" >> $GITHUB_OUTPUT
           echo "duration_seconds=$DURATION" >> $GITHUB_OUTPUT
