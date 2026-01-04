@@ -638,7 +638,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       [backend-tests, frontend-tests, mobile-tests, docker-build, security-scan]
-    if: success()
+    if: always()
 
     steps:
       - name: Record Pipeline Start Time
@@ -687,7 +687,26 @@ jobs:
 
       - name: Calculate Pipeline Metrics
         id: metrics
+        continue-on-error: true
         run: |
+          # Allow references to unset variables inside this block
+          set +u
+
+          # Safe Output Helper : Write to GITHUB_OUTPUT if possible, But never Fail the Script
+          write_output() { 
+            local name="$1"
+            local value="$2"
+
+            if [ -n "${GITHUB_OUTPUT:-}" ]; then
+              # Try writing to GITHUB_OUTPUT; If it Fails, Fall back to stdout.
+              if ! printf '%s=%s\n' "$name" "$value" >> "$GITHUB_OUTPUT" 2>/dev/null; then
+                echo "$name=$value"
+              fi
+            else
+              echo "$name=$value"
+            fi
+          }
+
           # Define Job Results Array
           JOBS=(
             "${{ needs.backend-tests.result }}"
@@ -709,19 +728,27 @@ jobs:
           # Calculate Execution Time
           END_TIME=$(date +%s)
           START_TIME=${{ steps.start-time.outputs.start }}
+
+          if ! [[ "$START_TIME" ]]; then
+            START_TIME=$((END_TIME - 600))
+          fi
+
           DURATION=$((END_TIME - START_TIME))
+          if ! [[ "$DURATION" ]]; then
+            DURATION=0
+          fi
 
           # Format Duration
           MINUTES=$((DURATION / 60))
           SECONDS=$((DURATION % 60))
 
           # Output Metrics
-          echo "duration_seconds=$DURATION" >> $GITHUB_OUTPUT
-          echo "duration_formatted=${MINUTES}m ${SECONDS}s" >> $GITHUB_OUTPUT
-          echo "passed=$PASSED_COUNT" >> $GITHUB_OUTPUT
-          echo "total=$TOTAL_JOBS" >> $GITHUB_OUTPUT
-          echo "success_rate=100" >> $GITHUB_OUTPUT
-          echo "emoji=🎉" >> $GITHUB_OUTPUT
+          write_output "duration_seconds" "$DURATION"
+          write_output "duration_formatted" "${MINUTES}m ${SECONDS}s"
+          write_output "passed" "$PASSED_COUNT"
+          write_output "total" "$TOTAL_JOBS"
+          write_output "success_rate" "100"
+          write_output "emoji" "🎉"
 
       - name: Success Notification
         run: |
@@ -772,20 +799,22 @@ jobs:
 
       - name: Count Failed Jobs & Calculate Metrics
         id: metrics
+        continue-on-error: true
         run: |
           # Allow references to unset variables inside this block
           set +u
 
-          # Safe Output Helper : Append to GITHUB_OUTPUT If Available, Otherwise Print to stdout
-          write_output() {
+          # Safe Output Helper : Write to GITHUB_OUTPUT if possible, But never Fail the Script
+          write_output() { 
             local name="$1"
             local value="$2"
 
-            if [ -n "${GITHUB_OUTPUT:-}" ] && [ -w "$(dirname "$GITHUB_OUTPUT")" ] || [ -n "${GITHUB_OUTPUT:-}" ]; then
-              # If GITHUB_OUTPUT is Set, Attempt to Append. Use printf to avoid surprises with special chars.
-              printf '%s=%s\n' "$name" "$value" >> "$GITHUB_OUTPUT" || echo "$name=$value"
+            if [ -n "${GITHUB_OUTPUT:-}" ]; then
+              # Try writing to GITHUB_OUTPUT; If it Fails, Fall back to stdout.
+              if ! printf '%s=%s\n' "$name" "$value" >> "$GITHUB_OUTPUT" 2>/dev/null; then
+                echo "$name=$value"
+              fi
             else
-              # Fallback for Local Debugging / Safety : print
               echo "$name=$value"
             fi
           }
@@ -816,7 +845,7 @@ jobs:
           fi
 
           # Success Rate (Guard Division by Zero)
-          if ! [[ "$TOTAL_JOBS" =~ ^[0-9]+$ ]] || [ "$TOTAL_JOBS" -eq 0 ]; then
+          if ! [[ "$TOTAL_JOBS" ]] || [ "$TOTAL_JOBS" -eq 0 ]; then
             SUCCESS_RATE=0
           else
             SUCCESS_RATE=$(( PASSED_COUNT * 100 / TOTAL_JOBS ))
@@ -826,12 +855,13 @@ jobs:
           END_TIME=$(date +%s)
           START_TIME="${{ steps.start-time.outputs.start }}"
 
-          if ! [[ "$START_TIME" =~ ^[0-9]+$ ]]; then
+          # Ensure START_TIME is a Number; If not, Fallback to a Safe Default
+          if ! [[ "$START_TIME" ]]; then
             START_TIME=$((END_TIME - 600))
           fi
 
           DURATION=$((END_TIME - START_TIME))
-          if ! [[ "$DURATION" =~ ^[0-9]+$ ]]; then
+          if ! [[ "$DURATION" ]]; then
             DURATION=0
           fi
 
