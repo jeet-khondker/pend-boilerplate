@@ -800,7 +800,7 @@ jobs:
           )
 
           # Count Total & Failed Jobs Dynamically
-          TOTAL_JOBS=${#JOBS[@]:-0}
+          TOTAL_JOBS=${#JOBS[@]}
           FAILED_COUNT=0
           PASSED_COUNT=0
 
