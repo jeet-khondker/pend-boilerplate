@@ -26,7 +26,8 @@ schema_view = get_schema_view(
     Info(
         title="PEND Boilerplate API",
         default_version="v1.0",
-        description="Master Codebase Foundation for all Software Development " "Projects",
+        description="Master Codebase Foundation for all Software Development "
+        "Projects",
         terms_of_service="https://www.google.com/policies/terms/",
         contact=Contact(email="jeetzhkhondker@gmail.com"),
         license=License(name="PEND Boilerplate License"),
@@ -42,11 +43,7 @@ urlpatterns = [
         schema_view.with_ui("swagger", cache_timeout=0),
         name="schema-swagger-ui",
     ),
-    path(
-        "redoc/",
-        schema_view.with_ui("redoc", cache_timeout=0),
-        name="schema-redoc"
-    ),
+    path("redoc/", schema_view.with_ui("redoc", cache_timeout=0), name="schema-redoc"),
     # Once you add Real Endpoints
     # path("api/v1/", include("api.v1.rest.urls")),
 ]
