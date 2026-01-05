@@ -35,6 +35,11 @@ on:
       # Backup Branches cannot have Pull Requests (PRs)
       - "!backup/**"
 
+permissions:
+  contents: read # Read Repository Contents
+  security-events: write # Upload Security Scan Results
+  pull-requests: write # Comment on PRs (For Upgrade Warnings)
+
 env:
   PYTHON_VERSION: 3.13
   NODE_VERSION: 24
@@ -593,6 +598,7 @@ jobs:
         run: |
           cd backend
           pip install -r requirements.txt
+          pip install -r requirements-dev.txt
 
       - name: Start Backend Server
         env:
