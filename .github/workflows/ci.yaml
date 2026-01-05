@@ -500,7 +500,7 @@ jobs:
           build-args: |
             NODE_VERSION=${{ env.NODE_VERSION }}
 
-  # Security Scan
+  # Security Scan - Optimized for Private (Logs Only) & Public (Security Tab)
   security-scan:
     name: Security Scan
     runs-on: ubuntu-latest
@@ -516,13 +516,22 @@ jobs:
         with:
           scan-type: "fs"
           scan-ref: "."
+          format: "table" # Use "table" to ensure results are visible in the CI Logs
+          severity: "CRITICAL,HIGH"
+          exit-code: "1" # This will fail the CI if Vulnerabilities are Found
+
+      - name: Generate SARIF Report (For Future Public Use)
+        uses: aquasecurity/trivy-action@master
+        if: always()
+        with:
+          scan-type: "fs"
+          scan-ref: "."
           format: "sarif"
           output: "trivy-results.sarif"
-          severity: "CRITICAL,HIGH"
 
       - name: Upload Trivy Results to GitHub Security
-        uses: github/codeql-action/upload-sarif@v3
-        if: always()
+        uses: github/codeql-action/upload-sarif@v4 # Upgraded to v4 for 2026 Compatibility
+        if: github.event.repository.private == false # ONLY Runs if the Repository is Public
         with:
           sarif_file: "trivy-results.sarif"
 
