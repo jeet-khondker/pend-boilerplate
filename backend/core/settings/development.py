@@ -31,7 +31,9 @@ LOGGING = {
     "disable_existing_loggers": False,
     "formatters": {
         "verbose": {
-            "format": "{levelname} {asctime} {module} {message}",
+            "format": (
+                "{levelname} {asctime} {module} {message}"
+            ),
             "style": "{",
         },
     },
