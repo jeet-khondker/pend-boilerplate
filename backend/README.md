@@ -357,7 +357,7 @@ black . && isort . && flake8 .
 
 ### Development Dependencies (requirements-dev.txt)
 
-- pytest 8.4.2+
+- pytest ≥8.4.2,<10
 - pytest-django 4.11.1+
 - pytest-cov 7.0.0+
 - black 25.9.0+

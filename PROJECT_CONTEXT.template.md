@@ -485,6 +485,7 @@ git revert [commit-hash]
 | 0.2.0   | `[YYYY-MM-DD]` | Added Payment Integration                 | `[Name]`       |
 | 0.3.0   | `[YYYY-MM-DD]` | Added Shipping Module                     | `[Name]`       |
 | 1.0.1   | 2026-01-12     | Optimized CI / CD Caching for 10GB Limit  | @jeet-khondker |
+| 1.0.2   | 2026-01-31     | PEND Baseline : `pytest` allows 9.x (≥8.4.2,<10)  | @jeet-khondker |
 
 ---
 

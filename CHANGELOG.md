@@ -5,7 +5,13 @@ All Notable Changes to the PEND Boilerplate Project will be Documented in this F
 The Format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.1] - 2026-01-12
+## [1.0.2] - January 31, 2026
+
+### Upgraded
+
+- **Backend** : `pytest` Requirement Updated to allow 9.x (`>=8.4.2,<10.0`).
+
+## [1.0.1] - January 12, 2026
 
 ### 🚀 Optimized
 
