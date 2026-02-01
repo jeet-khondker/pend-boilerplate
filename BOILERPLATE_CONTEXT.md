@@ -19,7 +19,7 @@
 - JWT Authentication with RSA256 (`djangorestframework-simplejwt 5.5.1`)
 - Celery 5.5.3 for Background Tasks
 - Redis 8.2 for Caching & Task Queue
-- Gunicorn 23 + Whitenoise 6.11 for Production
+- Gunicorn 23–24 + Whitenoise 6.11 for Production
 
 ### Frontend
 
