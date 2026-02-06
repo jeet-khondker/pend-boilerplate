@@ -263,7 +263,7 @@ pend-boilerplate/
 - `graphene-django` 3.2.3+
 - `fastapi` 0.119.0+
 - `celery` 5.5.3+
-- `redis` 8.2+
+- `redis` >=5.3.0,<8.0
 - `gunicorn` 23.0+
 - `whitenoise` 6.11+
 

@@ -351,7 +351,7 @@ black . && isort . && flake8 .
 - uvicorn 0.37.0+
 - pydantic 2.12.2+
 - celery 5.5.3+
-- redis 5.3.0+
+- redis >=5.3.0,<8.0
 - gunicorn 23.0+
 - whitenoise 6.11+
 
