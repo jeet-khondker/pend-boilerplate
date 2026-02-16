@@ -22,6 +22,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - **Note** : Support for Python 3.9 & Django < 5.2 has been dropped by the Package.
     - Legacy DRF Schema Generation Support has been removed.
   - **`faker`** Requirement Upgraded from `<38.0` to `<41.0` to support newer Python Environments & Locale Improvements. (**Note** : This Update requires Python 3.10 / higher for the Backend Module.)
+  - **`isort`** Upgraded Dependency Range from `<7.0,>=6.1.0` to `>=6.1.0,<8.0`.
 - **Mobile** : 
   - `expo-secure-store` Bumped from `15.0.7` to `15.0.8`
 
@@ -296,7 +297,7 @@ The First Complete Release of the PEND Boilerplate, a Full-Stack Development Tem
 ### Development Tools
 
 - **Testing** : `pytest 8.4.2`, Jest, 99.78% Coverage on UI
-- **Code Quality** : Black 26.1.0, Flake8 7.3.0, `isort 6.1.0`, ESLint
+- **Code Quality** : Black 26.1.0, Flake8 7.3.0, `isort >=6.1.0,<8.0`, ESLint
 - **Documentation** : Storybook v8.6.14 with 83 Interactive Stories
 - **Containerization** : Docker with Multi-Stage Builds
 - **CI / CD** : GitHub Actions (Free Tier, $0 / Month)
