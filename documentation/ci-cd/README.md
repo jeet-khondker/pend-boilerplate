@@ -187,12 +187,12 @@ chore/upgrade/database    # PostgreSQL Upgrade
 
 #### 📦 Layered Caching Strategy
 
-To stay within the 10GB GitHub Actions Storage Limit, the Pipeline uses a Decoupled Caching Approach : 
+To stay within the 10GB GitHub Actions Storage Limit, the Pipeline uses a Decoupled Caching Approach :
 
 - **Primary Cache** : `node_modules` & Global Binaries (Keyed by `package-lock.json`).
 - **Secondary Cache** : `.next/cache` & Build Artifacts (Keyed by Commit SHA).
 
-*This prevents frequent Build Updates from bloating the total Storage & triggering Premature Cache Eviction.*
+_This prevents frequent Build Updates from bloating the total Storage & triggering Premature Cache Eviction._
 
 ### CD Pipeline (Continuous Deployment)
 
@@ -350,6 +350,6 @@ See [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)
 
 ---
 
-**Last Updated** : January 2026
-**Pipeline Version** : 1.0.1 (Infrastructure Optimized)  
+**Last Updated** : February 13, 2026
+**Pipeline Version** : 1.0.4 (Infrastructure Optimized)  
 **Status** : Production-Ready ✅

@@ -279,8 +279,8 @@ Thank You for helping Make this A Welcoming, Friendly Community for All! 🎉
 
 ---
 
-**Version** : 1.0.1  
-**Last Updated** : January 17, 2026
+**Version** : 1.0.4  
+**Last Updated** : February 13, 2026
 **Based On** : Contributor Covenant v2.1
 
 ---

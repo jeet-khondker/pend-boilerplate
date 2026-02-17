@@ -115,7 +115,7 @@ Workflow Fails / Displays A Warning ⚠️ : `Approaching total cache storage li
 
 ### ✅ Solution
 
-The Boilerplate uses a **Layered Caching Strategy** to prevent this. If you are still hitting the limit : 
+The Boilerplate uses a **Layered Caching Strategy** to prevent this. If you are still hitting the limit :
 
 1. **Manual Cleanup** : Go to `Actions` → `Caches` & delete Caches from old feature branches / merged PRs.
 2. **Key Optimization** : Ensure your `ci.yaml` separates Static Dependencies (`node_modules`) from Dynamic Build Artifacts (`.next/cache`).
@@ -567,7 +567,6 @@ import { Button } from "@/components/ui/Button"; // Verify Correct Path
 ### Debug Steps
 
 1. **Check Workflow Logs**
-
    - Go to `Actions` Tab
    - Click Failed Workflow
    - Expand Failed Jobs
@@ -598,7 +597,6 @@ import { Button } from "@/components/ui/Button"; // Verify Correct Path
    ```
 
 4. **Search GitHub Issues**
-
    - Check Closed Issues for Solutions
    - Search for Specific Error Messages
 
@@ -627,5 +625,5 @@ Before Pushing to CI, Verify :
 
 ---
 
-**Last Updated:** January 2026
-**Version:** 1.0.1 (Infrastructure Optimized)
+**Last Updated:** February 13, 2026
+**Version:** 1.0.4 (Infrastructure Optimized)
