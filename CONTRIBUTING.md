@@ -1721,6 +1721,6 @@ This Boilerplate provides a Solid Foundation for Your Next Project. Follow these
 
 **Questions?** Check the Documentation / Open an Issue.
 
-**Version** : 1.0.3
-**Last Updated** : February 06, 2026  
+**Version** : 1.0.4
+**Last Updated** : February 13, 2026  
 **Maintainer** : Jeet Z. H. Khondker

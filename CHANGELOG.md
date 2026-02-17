@@ -5,17 +5,24 @@ All Notable Changes to the PEND Boilerplate Project will be Documented in this F
 The Format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.4] - February 13, 2026
+
+### Upgraded
+
+- **Mobile** :
+  - `expo-status-bar` Bumped from `3.0.8` to `3.0.9` to stay aligned with the latest Maintenance Patches.
+
 ## [1.0.3] - February 06, 2026
 
 ### 🛡️ Fixed
 
-- **Security** : 
+- **Security** :
   - Updated `axios` to `v1.13.5` to resolve [`CVE-2026-25639`](https://github.com/advisories/GHSA-43fc-jf86-j433) (Denial of Service via `__proto__` Key).
   - Updated `@isaacs/brace-expansion` to `v5.0.1` to resolve [`CVE-2026-25547`](https://github.com/advisories/GHSA-7h2j-956f-4vf2) (Denial of Service via unbounded range expansion).
 
 ### Upgraded
 
-- **Backend** : 
+- **Backend** :
   - Added Compatibility Support for Django Versions `>=5.2,<6.1`.
   - **`django-filter`** Upgraded to `25.x` Range.
     - This Version formally supports **Python 3.13** & **Django 5.2**.
@@ -23,9 +30,9 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
     - Legacy DRF Schema Generation Support has been removed.
   - **`faker`** Requirement Upgraded from `<38.0` to `<41.0` to support newer Python Environments & Locale Improvements. (**Note** : This Update requires Python 3.10 / higher for the Backend Module.)
   - **`isort`** Upgraded Dependency Range from `<7.0,>=6.1.0` to `>=6.1.0,<8.0`.
-- **Frontend** : 
+- **Frontend** :
   - `@types/react-dom` Bumped to `^19` to fully align with the React 19 EcoSystem. This ensures full TypeScript Support for React 19's New Features (like Actions & the `use` Hook) within the `/frontend` Directory.
-- **Mobile** : 
+- **Mobile** :
   - `expo-secure-store` Bumped from `15.0.7` to `15.0.8`
 
 ## [1.0.2] - January 31, 2026
@@ -36,7 +43,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **`pytest`** Requirement Updated to allow 9.x (`>=8.4.2,<10.0`).
   - **`gunicorn`** Requirement Updated from `<24.0` to `<25.0` (Allows Gunicorn 24.x)
   - **`black`** Requirement Updated from `25.9.0` to `26.1.0`
-- **Frontend** : 
+- **Frontend** :
   - `@types/node` Bumped from `^20` (20.19.24) to `^25` (25.1.0) in `frontend/package.json`
   - `zod` Bumped from `4.1.12` to `4.3.6` in `frontend/package.json`
   - `axios` Bumped from `1.13.1` to `1.13.5` in `frontend/package.json` for the Resolution of High Severity Security Vulnerability [`CVE-2026-25639`](https://github.com/advisories/GHSA-43fc-jf86-j433)
@@ -46,7 +53,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `expo-constants` Bumped from `18.0.10` to `18.0.13` (Patch, No User-Facing Changes).
   - `axios` Bumped from `1.13.2` to `1.13.5` in `mobile/package.json` for the Resolution of High Severity Security Vulnerability [`CVE-2026-25639`](https://github.com/advisories/GHSA-43fc-jf86-j433)
   - `zod` Bumped from `3.25.76` to `4.3.6` in the `mobile/package.json`.
-    - **Breaking Changes** : 
+    - **Breaking Changes** :
       1. `z.number()` now rejects `Infinity` & `NaN` by default.
       2. Updated Error Handling Logic to align with Zod 4's new unified error API.
     - **Improvements** : Significantly reduced bundle size for the Mobile Application & improved Validation Performance.

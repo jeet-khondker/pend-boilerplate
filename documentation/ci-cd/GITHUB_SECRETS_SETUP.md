@@ -47,13 +47,11 @@ It is the Token for Uploading Code Coverage Reports to [Codecov.io](https://code
 ### How to get it ?
 
 1. **Sign Up for Codecov** :
-
    - Go To [Codecov.io](https://codecov.io)
    - Click **Sign up with GitHub**
    - Authorize Codecov to Access Your Repositories
 
 2. **Add Your Repository** :
-
    - Click **Add new repository**
    - Select Your Repository
    - Codecov will Display Your Upload Token
@@ -97,19 +95,16 @@ It is the Token for deploying Storybook to [Chromatic](https://www.chromatic.com
 ### How to get it ?
 
 1. **Sign Up for Chromatic** :
-
    - Go to [Chromatic](https://www.chromatic.com)
    - Click **Sign in with GitHub**
    - Authorize Chromatic
 
 2. **Create A Project** :
-
    - Click **Add project**
    - Select Your Repository
    - Choose **Storybook** as Your Project Type
 
 3. **Get Your Project Token** :
-
    - After Project Creation, You will see :
 
    ```bash
@@ -148,13 +143,11 @@ It is the Authentication Token for [Expo](https://expo.dev) to Build & Publish M
 ### How to get it ?
 
 1. **Sign up for Expo** :
-
    - Go to [Expo](https://expo.dev)
    - Click **Sign up** or **Log in**
    - Complete Registration
 
 2. **Generate Access Token** :
-
    - Go to [Access Tokens](https://expo.dev/accounts/[your-username]/settings/access-tokens)
    - Click **Create token**
    - Give it a Name (Example : **CI / CD Pipeline**)
@@ -256,7 +249,6 @@ The Workflows will Fail at Upload Time But will Continue Running.
    ```
 
 2. Create A Pull Request (PR) To `main` Branch :
-
    - Go to Your Repository on Github
    - Click **Compare & pull request** Button
    - **Base / Target Branch** : `main`
@@ -265,7 +257,6 @@ The Workflows will Fail at Upload Time But will Continue Running.
    - Click **Create pull request**
 
 3. Verify CI Pipeline is Executed
-
    - Go to **Actions** Tab in Github
    - Find Your PR Workflow Run (Named **CI Pipeline**)
    - Watch Each Job's Execution for Success :
@@ -402,13 +393,13 @@ User Feature Branch [test/username/verify-ci-cd]
 
 ## Cost Summary
 
-| Service            | Open Source              | Private / Commercial                    |
-| ------------------ | ------------------------ | --------------------------------------- |
-| **Codecov**        | ✅ FREE                  | $10/Month                               |
-| **Chromatic**      | ✅ FREE (5000 Snapshots) | $149/Month                              |
-| **Expo**           | ✅ FREE (Limited)        | $29/Month                               |
-| **GitHub Actions** | ✅ 2,000 Minutes/Month   | 3,000 min/month (Included in Team Plan) |
-| **Actions Cache Storage** | ✅ 10GB (Managed)   | 10GB - 100GB (Plan Dependent) |
+| Service                   | Open Source              | Private / Commercial                    |
+| ------------------------- | ------------------------ | --------------------------------------- |
+| **Codecov**               | ✅ FREE                  | $10/Month                               |
+| **Chromatic**             | ✅ FREE (5000 Snapshots) | $149/Month                              |
+| **Expo**                  | ✅ FREE (Limited)        | $29/Month                               |
+| **GitHub Actions**        | ✅ 2,000 Minutes/Month   | 3,000 min/month (Included in Team Plan) |
+| **Actions Cache Storage** | ✅ 10GB (Managed)        | 10GB - 100GB (Plan Dependent)           |
 
 **Cost Optimization** : To maintain the $0 / Month Infrastructure Cost, this Boilerplate implements a Layered Caching Strategy in `ci.yml`. This automatically manages the 10GB Storage Limit by separating Large Static Dependencies from frequently changing Build Artifacts, preventing **Cache Bloat** & ensuring High Availability of your CI / CD Pipelines.
 
@@ -474,4 +465,4 @@ EXPO_TOKEN
 
 **🎉 Once Secrets are Configured, Your CI / CD Pipeline is Ready to Run 🚀**
 
-**PEND Boilerplate Version** : 1.0.1 (Infrastructure Optimized)
+**PEND Boilerplate Version** : 1.0.4 (Infrastructure Optimized)
