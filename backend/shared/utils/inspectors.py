@@ -1,7 +1,6 @@
 from drf_yasg import openapi  # pyright: ignore[reportMissingImports]
-from drf_yasg.inspectors import (  # pyright: ignore[reportMissingImports]
-    FilterInspector,
-)
+from drf_yasg.inspectors import \
+    FilterInspector  # pyright: ignore[reportMissingImports]
 
 
 class DjangoFilterInspector(FilterInspector):
