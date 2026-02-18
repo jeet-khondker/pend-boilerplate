@@ -312,15 +312,9 @@ The Design System is fully integrated in `src/app/globals.css` using Tailwind v4
 
 ```css
 /* Primary Colors */
---color-primary-50: #f0f9ff
---color-primary-500: #3b82f6
---color-primary-900: #1e3a8a
-
-/* Semantic Colors */
---color-success: #10b981
---color-warning: #f59e0b
---color-error: #ef4444
---color-info: #3b82f6
+--color-primary-50: #f0f9ff --color-primary-500: #3b82f6
+  --color-primary-900: #1e3a8a /* Semantic Colors */ --color-success: #10b981
+  --color-warning: #f59e0b --color-error: #ef4444 --color-info: #3b82f6;
 ```
 
 #### Typography
@@ -585,7 +579,7 @@ export function MyComponent({
           "size-md": size === "md",
           "size-lg": size === "lg",
         },
-        className
+        className,
       )}
     >
       {children}
@@ -609,7 +603,7 @@ describe("MyComponent", () => {
 
   it("Applies Variant Styles", () => {
     const { container } = render(
-      <MyComponent variant="secondary">Test</MyComponent>
+      <MyComponent variant="secondary">Test</MyComponent>,
     );
     expect(container.firstChild).toHaveClass("variant-secondary");
   });
@@ -938,7 +932,7 @@ npm run storybook -- --no-manager-cache
   "clsx": "^2.1.1",
   "tailwind-merge": "^3.4.0",
   "@types/react-redux": "^7.1.34",
-  "tar": "^7.5.7",
+  "tar": "^7.5.7"
 }
 ```
 
@@ -953,12 +947,12 @@ npm run storybook -- --no-manager-cache
   "jest-environment-jsdom": "^30.2.0",
   "@types/jest": "^30.0.0",
   "cypress": "^15.6.0",
-  "eslint": "^9",
+  "eslint": "9.21.0",
   "eslint-config-next": "^16.1.6",
   "@types/node": "^25",
   "@types/react": "^19",
   "@types/react-dom": "^19",
-  "typescript": "^5.0.0",
+  "typescript": "^5.0.0"
 }
 ```
 
