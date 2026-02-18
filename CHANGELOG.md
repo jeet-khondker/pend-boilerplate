@@ -14,6 +14,9 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Upgraded
 
+- **Frontend** :
+  - `eslint` Pinned to `v9` to fix CI Breaking Changes.
+
 - **Mobile** :
   - `expo-status-bar` Bumped from `3.0.8` to `3.0.9` to stay aligned with the latest Maintenance Patches.
   - `react` & `@types/react` Upgraded to `19.1.0`.
