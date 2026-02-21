@@ -17,6 +17,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Backend** : 
   - **`isort`** Upgraded Dependency Range from `>=6.1.0,<8.0` to `>=6.1.0,<9.0`.
+  - **`gunicorn`** Requirement Updated from `<25.0,>=23.0.0` to `>=23.0.0,<26.0`.
 
 ## [1.0.4] - February 13, 2026
 
