@@ -24,6 +24,8 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Frontend** :
   - **Dependencies** : **`tailwindcss`** Bumped from `4.1.18` to `4.2.0`.
   - **Tooling** : **`@tailwindcss/postcss`** Updated to match the Core Engine Version for better Build Stability.
+- **Mobile** :
+  - **`@react-navigation/bottom-tabs`** Bumped from `7.13.0` to `7.14.0`.
 
 ## [1.0.4] - February 13, 2026
 
