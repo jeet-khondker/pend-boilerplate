@@ -352,7 +352,7 @@ black . && isort . && flake8 .
 - pydantic 2.12.2+
 - celery 5.5.3+
 - redis >=5.3.0,<8.0
-- gunicorn 23.0+
+- gunicorn >=23.0.0,<26.0
 - whitenoise 6.11+
 
 ### Development Dependencies (requirements-dev.txt)
