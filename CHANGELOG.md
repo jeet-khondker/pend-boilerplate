@@ -7,6 +7,11 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.6] - February 27, 2026
 
+### Fixed
+
+- **Security** :
+  - Updated `minimatch` to `10.2.3` for resolving [`CVE-2026-27903`](https://vulners.com/cve/CVE-2026-27903) & [`CVE-2026-27904`](https://vulners.com/cve/CVE-2026-27904)
+
 ### Upgraded
 
 - **Frontend** : 
