@@ -7,10 +7,18 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.6] - February 27, 2026
 
+### Fixed
+
+- **Security** :
+  - Updated `minimatch` to `10.2.3` for resolving [`CVE-2026-27903`](https://vulners.com/cve/CVE-2026-27903) & [`CVE-2026-27904`](https://vulners.com/cve/CVE-2026-27904)
+
 ### Upgraded
 
+- **Frontend** : 
+  - **`@storybook/nextjs-vite`** Bumped from `10.2.9` to `10.2.13`.
+  - **`tailwindcss`** Bumped from `4.2.0` to `4.2.1`.
 - **Mobile** :
-  - `expo-constants` Bumped from `18.0.13` to `55.0.7`.
+  - **`expo-constants`** Bumped from `18.0.13` to `55.0.7`.
 
 ## [1.0.5] - February 20, 2026
 
