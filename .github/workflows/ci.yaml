@@ -528,7 +528,8 @@ jobs:
           fetch-depth: 0 # Required for Trivy to Scan the Entire Repository
 
       - name: Run Trivy & Generate SARIF Report
-        uses: aquasecurity/trivy-action@0.28.0 # Use Stable Trivy Version
+        uses: aquasecurity/trivy-action@0.33.1
+        continue-on-error: true
         with:
           scan-type: "fs"
           scan-ref: "."
@@ -536,10 +537,14 @@ jobs:
           output: "trivy-results.sarif"
           severity: "CRITICAL,HIGH"
           exit-code: "0" # Allow the Pipeline to stay ✅
+        env:
+          # Avoiding GHCR “TOOMANYREQUESTS” DB Pulls (Common Transient CI Failure)
+          TRIVY_DB_REPOSITORY: public.ecr.aws/aquasecurity/trivy-db:2
+          TRIVY_JAVA_DB_REPOSITORY: public.ecr.aws/aquasecurity/trivy-java-db:1
 
       - name: Upload Trivy Results to GitHub Security
         uses: github/codeql-action/upload-sarif@v4 # Upgraded to v4 for 2026 Compatibility
-        if: always() # Upload even if Vulnerabilities exist
+        if: always() && hashFiles('trivy-results.sarif') != ''
         with:
           sarif_file: "trivy-results.sarif"
 
