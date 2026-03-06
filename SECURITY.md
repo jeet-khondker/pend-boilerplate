@@ -53,6 +53,10 @@ The PEND Boilerplate includes several Built-In Security Features :
 - ✅ **Network Segmentation** in Docker Compose
 - ✅ **Secret Management** via Environment Variables
 
+**Trivy SARIF Upload** :
+
+CI uses Trivy SARIF Upload; DB Downloads are mirrored via ECR to reduce Rate-Limit Failures.
+
 ---
 
 ## 🚨 Reporting A Vulnerability
@@ -394,7 +398,7 @@ This Security Policy applies to the PEND Boilerplate Project. Implementations & 
 
 ---
 
-**Last Updated** : February 13, 2026  
-**PEND Boilerplate Version** : 1.0.4
+**Last Updated** : March 04, 2026  
+**PEND Boilerplate Version** : 1.0.7
 
 Thank You for Helping Keep PEND Boilerplate & Our Users Safe! 🙏

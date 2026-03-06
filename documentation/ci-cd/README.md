@@ -274,6 +274,15 @@ on:
 - **Safety** - Python Dependency Vulnerabilities
 - **SARIF Upload** - Results Sent to GitHub Security Tab
 
+#### Trivy DB Reliability Note
+
+Trivy downloads its Vulnerability Databases during CI. To avoid transient GHCR Rate-Limits (Example : `TOOMANYREQUESTS`), the Pipeline uses the Trivy DB ECR Mirror : 
+
+- `TRIVY_DB_REPOSITORY=public.ecr.aws/aquasecurity/trivy-db:2`
+- `TRIVY_JAVA_DB_REPOSITORY=public.ecr.aws/aquasecurity/trivy-java-db:1`
+
+SARIF Upload is guarded so CI won’t fail if Trivy couldn’t generate `trivy-results.sarif`.
+
 ### Secret Management
 
 - All Secrets Stored in GitHub Secrets (Encrypted)
@@ -350,6 +359,6 @@ See [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)
 
 ---
 
-**Last Updated** : February 13, 2026
-**Pipeline Version** : 1.0.4 (Infrastructure Optimized)  
+**Last Updated** : March 04, 2026
+**Pipeline Version** : 1.0.7 (Infrastructure Optimized)  
 **Status** : Production-Ready ✅

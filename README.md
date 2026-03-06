@@ -1076,6 +1076,10 @@ For More Details, See Our Complete [Security Policy](SECURITY.md).
 
 We use `npm overrides` in the `/mobile` Project to force-patch Transitive Vulnerabilities (like `brace-expansion`). If a Security Scan flags a Nested Dependency, refer to [MAINTENANCE.md](documentation/ci-cd/MAINTENANCE.md) for the Aliasing Protocol.
 
+**Trivy SARIF Upload** :
+
+CI uses Trivy SARIF Upload; DB Downloads are mirrored via ECR to reduce Rate-Limit Failures.
+
 ---
 
 ### Documentation
@@ -1112,6 +1116,6 @@ This ensures we stay within GitHub's 10GB limit while maintaining fast build spe
 
 **Built with ❤️ by [@corebit-bd](https://github.com/corebit-bd)**
 
-**Version** : 1.0.6
-**Last Updated** : February 27, 2026  
+**Version** : 1.0.7
+**Last Updated** : March 04, 2026  
 **Status** : Production Ready & Scaffolding Ready ✅

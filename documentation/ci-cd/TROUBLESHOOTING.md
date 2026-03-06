@@ -562,6 +562,30 @@ import { Button } from "@/components/ui/Button"; // Verify Correct Path
 
 ---
 
+## 15. Trivy SARIF Upload Fails (Missing `trivy-results.sarif`)
+
+### ❌ Issue
+
+- Trivy Step fails (Often due to Registry Rate Limits downloading the Vulnerability DB).
+- Next Step fails with : `Path does not exist: trivy-results.sarif`
+
+### ✅ Solution
+
+1. Use the ECR Mirror for Trivy DBs :
+
+- `TRIVY_DB_REPOSITORY=public.ecr.aws/aquasecurity/trivy-db:2`
+- `TRIVY_JAVA_DB_REPOSITORY=public.ecr.aws/aquasecurity/trivy-java-db:1`
+
+2. Make SARIF Upload Conditional :
+
+- `if: always() && hashFiles('trivy-results.sarif') != ''`
+
+3. (Optional But Recommended) Make the Trivy Step Non-Blocking in CI :
+
+- `continue-on-error: true`
+
+---
+
 ## 🆘 Still Having Issues?
 
 ### Debug Steps
@@ -625,5 +649,5 @@ Before Pushing to CI, Verify :
 
 ---
 
-**Last Updated:** February 13, 2026
-**Version:** 1.0.4 (Infrastructure Optimized)
+**Last Updated:** March 04, 2026
+**Version:** 1.0.7 (Infrastructure Optimized)
