@@ -12,6 +12,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Frontend** :
   - **`axios`** Bumped from `1.13.5` to `1.13.6`.
   - **`@storybook/addon-docs`** Bumped from `10.2.9` to `10.2.15`.
+  - **`tailwind-merge`** Bumped from `3.4.1` to `3.5.0`.
 - **Mobile** :
   - **`react-native-safe-area-context`** Bumped from `5.6.2` to `5.7.0`.
   - **`react-native`** Bumped from `0.84.0` to `0.84.1`.
