@@ -930,7 +930,7 @@ npm run storybook -- --no-manager-cache
   "react-hook-form": "^7.71.2",
   "@hookform/resolvers": "^5.2.2",
   "clsx": "^2.1.1",
-  "tailwind-merge": "^3.4.0",
+  "tailwind-merge": "^3.5.0",
   "@types/react-redux": "^7.1.34",
   "tar": "^7.5.7"
 }
