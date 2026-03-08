@@ -17,6 +17,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **`react-native-safe-area-context`** Bumped from `5.6.2` to `5.7.0`.
   - **`react-native`** Bumped from `0.84.0` to `0.84.1`.
   - **`@react-navigation/native`** Bumped from `7.1.31` to `7.1.33`.
+  - **`@react-navigation/stack`** Bumped from `7.8.2` to `7.8.4`.
 
 # [1.0.7] - March 04, 2026
 
