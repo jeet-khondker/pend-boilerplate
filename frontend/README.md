@@ -932,7 +932,7 @@ npm run storybook -- --no-manager-cache
   "clsx": "^2.1.1",
   "tailwind-merge": "^3.5.0",
   "@types/react-redux": "^7.1.34",
-  "tar": "^7.5.7"
+  "tar": "^7.5.11"
 }
 ```
 
