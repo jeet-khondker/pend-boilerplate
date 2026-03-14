@@ -5,6 +5,13 @@ All Notable Changes to the PEND Boilerplate Project will be Documented in this F
 The Format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+# [1.0.9] - March 14, 2026
+
+### Upgraded
+
+- **Frontend** :
+  - **`@vitest/browser-playwright`** Bumped from `4.0.18` to `4.1.0`.
+
 # [1.0.8] - March 07, 2026
 
 ### Upgraded
@@ -617,4 +624,4 @@ When using this Boilerplate for Your Projects :
 
 ---
 
-**Status** : ✅ Production Ready | **Version** : 1.0.8 | **Released** : March 07, 2026
+**Status** : ✅ Production Ready | **Version** : 1.0.9 | **Released** : March 14, 2026
