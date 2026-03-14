@@ -12,6 +12,8 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Frontend** :
   - **`@vitest/browser-playwright`** Bumped from `4.0.18` to `4.1.0`.
   - **`tar`** Bumped from `7.5.9` to `7.5.11`.
+- **Mobile** :
+  - `expo-secure-store` Bumped from `15.0.8` to `55.0.8`.
 
 # [1.0.8] - March 07, 2026
 
