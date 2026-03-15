@@ -16,6 +16,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Mobile** :
   - `expo-secure-store` Bumped from `15.0.8` to `55.0.8`.
   - **`@react-navigation/bottom-tabs`** Bumped from `7.15.2` to `7.15.5`.
+  - **`@react-navigation/stack`** Bumped from `7.8.4` to `7.8.5`.
 
 # [1.0.8] - March 07, 2026
 
