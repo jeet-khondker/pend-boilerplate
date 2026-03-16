@@ -18,6 +18,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - `expo-secure-store` Bumped from `15.0.8` to `55.0.8`.
   - **`@react-navigation/bottom-tabs`** Bumped from `7.15.2` to `7.15.5`.
   - **`@react-navigation/stack`** Bumped from `7.8.4` to `7.8.5`.
+  - **`expo`** Bumped from `55.0.5` to `55.0.6`.
 
 # [1.0.8] - March 07, 2026
 
@@ -256,7 +257,7 @@ The First Complete Release of the PEND Boilerplate, a Full-Stack Development Tem
 
 ### Step 7 : Mobile Foundation (Expo)
 
-- **Expo ~55.0.5** with React Native
+- **Expo ~55.0.6** with React Native
 - PEND-Specific Directory Structure for Mobile Application Development
 - `App.tsx` with PEND Branding
 - `.env.example` for Mobile Environment Configuration
@@ -398,7 +399,7 @@ The First Complete Release of the PEND Boilerplate, a Full-Stack Development Tem
 - **Type** : Headless, Multi-Tenant, MicroServices, Event-Driven
 - **Backend** : Django 5.2 (LTS), FastAPI 0.119, GraphQL (Graphene-Django 3.2.3)
 - **Frontend** : NextJS 16, ReactJS, TypeScript, Tailwind CSS v4.2
-- **Mobile** : Expo ~55.0.5, React Native
+- **Mobile** : Expo ~55.0.6, React Native
 - **Database** : PostgreSQL 15 with Multi-Schema Architecture
 - **Caching / Queue** : Redis 8.2 with Celery 5.5.3
 - **Authentication** : JWT with RSA256 (`djangorestframework-simplejwt 5.5.1`)
