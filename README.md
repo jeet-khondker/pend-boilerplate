@@ -106,7 +106,7 @@ This Boilerplate serves as a **Template** for Rapidly Scaffolding New Projects w
 - **Tailwind CSS v4** - Utility-First CSS
 - **Redux Toolkit** - State Management
 - **React Hook Form** + **Zod** - Form Handling & Validation
-- **Storybook 10.2.10** - Component Documentation
+- **Storybook 10.3.1** - Component Documentation
 - **Jest** + **ReactJS Testing Library** - Testing
 
 ### Mobile
@@ -1116,6 +1116,6 @@ This ensures we stay within GitHub's 10GB limit while maintaining fast build spe
 
 **Built with ❤️ by [@corebit-bd](https://github.com/corebit-bd)**
 
-**Version** : 1.0.9
-**Last Updated** : March 14, 2026  
+**Version** : 1.0.10
+**Last Updated** : March 21, 2026  
 **Status** : Production Ready & Scaffolding Ready ✅
