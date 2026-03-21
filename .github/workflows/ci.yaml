@@ -528,7 +528,7 @@ jobs:
           fetch-depth: 0 # Required for Trivy to Scan the Entire Repository
 
       - name: Run Trivy & Generate SARIF Report
-        uses: aquasecurity/trivy-action@0.33.1
+        uses: aquasecurity/trivy-action@v0.33.1
         continue-on-error: true
         with:
           scan-type: "fs"
