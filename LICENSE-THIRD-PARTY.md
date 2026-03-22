@@ -247,7 +247,7 @@ This Document contains the Licenses & Notices for 3rd Party Software Included in
 
 ### Storybook (MIT License)
 
-- **Version** : 10.2.10
+- **Version** : 10.3.1
 - **Copyright** : Storybook Contributors
 - **License** : MIT
 - **Website** : https://storybook.js.org/
