@@ -16,6 +16,8 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Frontend** :
   - **`storybook`** Bumped from `10.2.17` to `10.3.1`.
+- **Mobile** :
+  - **`@react-navigation/stack`** Bumped from `7.8.5` to `7.8.6`.
 
 # [1.0.9] - March 14, 2026
 
