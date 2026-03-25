@@ -16,6 +16,15 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Frontend** :
   - **`storybook`** Bumped from `10.2.17` to `10.3.1`.
+  - **`@storybook/addon-vitest`** Bumped from `10.2.13` to `10.3.1`.
+  - **`@storybook/addon-a11y`** Bumped from `10.2.9` to `10.3.1`.
+  - **`@chromatic-com/storybook`** Bumped from `5.0.1` to `5.0.2`.
+  - **`eslint-config-next`** Bumped from `16.1.6` to `16.2.0`.
+- **Mobile** :
+  - **`@react-navigation/stack`** Bumped from `7.8.5` to `7.8.6`.
+  - **`expo-constants`** Bumped from `55.0.7` to `55.0.9`.
+  - **`expo-secure-store`** Bumped from `55.0.8` to `55.0.9`.
+  - **`@react-navigation/bottom-tabs`** Bumped from `7.15.5` to `7.15.6`.
 
 # [1.0.9] - March 14, 2026
 
