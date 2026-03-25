@@ -111,7 +111,7 @@ This Boilerplate serves as a **Template** for Rapidly Scaffolding New Projects w
 
 ### Mobile
 
-- **Expo ~55.0.6** - React Native Framework
+- **Expo ~55.0.8** - React Native Framework
 - **React Native** - Cross-Platform Mobile Application Development
 
 ### DevOps
