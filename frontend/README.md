@@ -943,7 +943,7 @@ npm run storybook -- --no-manager-cache
   "@testing-library/react": "^16.3.0",
   "@testing-library/jest-dom": "^6.9.1",
   "@testing-library/user-event": "^14.6.1",
-  "jest": "^30.2.0",
+  "jest": "^30.3.0",
   "jest-environment-jsdom": "^30.2.0",
   "@types/jest": "^30.0.0",
   "cypress": "^15.6.0",
