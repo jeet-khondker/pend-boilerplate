@@ -9,6 +9,8 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Upgraded
 
+- **Frontend** :
+  - **`jest`** Bumped from `30.2.0` to `30.3.0`.
 - **Mobile** :
   - **`@react-navigation/native`** Bumped from `7.1.34` to `7.2.1`.
   - **`react-hook-form`** Bumped from `7.71.2` to `7.72.0`.
