@@ -18,6 +18,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **`react-hook-form`** Bumped from `7.71.2` to `7.72.0`.
   - **`@react-navigation/stack`** Bumped from `7.8.6` to `7.8.8`.
   - **`typescript`** Bumped from `5.9.3` to `6.0.2`.
+  - **`@react-navigation/bottom-tabs`** Bumped from `7.15.6` to `7.15.8`.
 
 # [1.0.10] - March 21, 2026
 
