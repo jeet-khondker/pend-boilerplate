@@ -5,6 +5,17 @@ All Notable Changes to the PEND Boilerplate Project will be Documented in this F
 The Format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+# [1.0.11] - March 28, 2026
+
+### Upgraded
+
+- **Frontend** :
+  - **`jest`** Bumped from `30.2.0` to `30.3.0`.
+- **Mobile** :
+  - **`@react-navigation/native`** Bumped from `7.1.34` to `7.2.1`.
+  - **`react-hook-form`** Bumped from `7.71.2` to `7.72.0`.
+  - **`@react-navigation/stack`** Bumped from `7.8.6` to `7.8.8`.
+
 # [1.0.10] - March 21, 2026
 
 ### Fixed
