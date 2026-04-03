@@ -15,7 +15,7 @@ The frontend is built with NextJS 16 and provides a modern, performant, and type
 - **React Hook Form** - Performant Form Handling
 - **Zod** - Schema Validation
 - **Axios** - HTTP Client for API Communication
-- **Storybook 10.3.1 (NextJS + Vite Builder)** - Component Documentation & Development
+- **Storybook 10.3.4 (NextJS + Vite Builder)** - Component Documentation & Development
 
 ### Design Principles
 
@@ -953,7 +953,7 @@ npm run storybook -- --no-manager-cache
   "@types/react": "^19",
   "@types/react-dom": "^19",
   "typescript": "^5.0.0",
-  "storybook": "^10.3.1"
+  "storybook": "^10.3.4"
 }
 ```
 

@@ -276,7 +276,7 @@ on:
 
 #### Trivy DB Reliability Note
 
-Trivy downloads its Vulnerability Databases during CI. To avoid transient GHCR Rate-Limits (Example : `TOOMANYREQUESTS`), the Pipeline uses the Trivy DB ECR Mirror : 
+Trivy downloads its Vulnerability Databases during CI. To avoid transient GHCR Rate-Limits (Example : `TOOMANYREQUESTS`), the Pipeline uses the Trivy DB ECR Mirror :
 
 - `TRIVY_DB_REPOSITORY=public.ecr.aws/aquasecurity/trivy-db:2`
 - `TRIVY_JAVA_DB_REPOSITORY=public.ecr.aws/aquasecurity/trivy-java-db:1`
@@ -359,6 +359,6 @@ See [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)
 
 ---
 
-**Last Updated** : March 14, 2026
-**Pipeline Version** : 1.0.9 (Infrastructure Optimized)  
+**Last Updated** : April 04, 2026
+**Pipeline Version** : 1.0.12 (Infrastructure Optimized)  
 **Status** : Production-Ready ✅
