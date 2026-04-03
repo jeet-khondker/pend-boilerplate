@@ -12,6 +12,9 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Frontend** :
   - **`storybook`** Bumped from `10.3.3` to `10.3.4`.
 
+- **Mobile** :
+  - **expo** Bumped from `55.0.8` to `55.0.11`.
+
 # [1.0.11] - March 28, 2026
 
 ### Upgraded
