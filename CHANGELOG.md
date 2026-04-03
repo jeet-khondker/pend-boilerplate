@@ -11,7 +11,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Frontend** :
   - **`storybook`** Bumped from `10.3.3` to `10.3.4`.
-
+  - **`eslint-plugin-storybook`** Bumped from `10.3.3` to `10.3.4`.
 - **Mobile** :
   - **expo** Bumped from `55.0.8` to `55.0.11`.
 
