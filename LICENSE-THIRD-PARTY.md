@@ -247,7 +247,7 @@ This Document contains the Licenses & Notices for 3rd Party Software Included in
 
 ### Storybook (MIT License)
 
-- **Version** : 10.3.1
+- **Version** : 10.3.4
 - **Copyright** : Storybook Contributors
 - **License** : MIT
 - **Website** : https://storybook.js.org/
@@ -475,7 +475,7 @@ For Questions about Licensing in this Project :
 
 ---
 
-**Last Updated** : March 28, 2026
-**PEND Boilerplate Version** : 1.0.11 (Infrastructure Optimized)
+**Last Updated** : April 04, 2026
+**PEND Boilerplate Version** : 1.0.12 (Infrastructure Optimized)
 
 For the Main Project License, See [LICENSE](LICENSE) in the Root Directory.
