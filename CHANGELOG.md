@@ -18,6 +18,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **`@react-navigation/bottom-tabs`** Bumped from `7.15.8` to `7.15.9`.
   - **`expo-secure-store`** Bumped from `55.0.9` to `55.0.11`.
   - **`axios`** Bumped from `1.13.6` to `1.14.0`.
+  - **`expo-status-bar`** Bumped from `55.0.4` to `55.0.5`.
 
 # [1.0.11] - March 28, 2026
 
