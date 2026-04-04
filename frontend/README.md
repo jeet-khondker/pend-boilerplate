@@ -948,7 +948,7 @@ npm run storybook -- --no-manager-cache
   "@types/jest": "^30.0.0",
   "cypress": "^15.6.0",
   "eslint": "9.21.0",
-  "eslint-config-next": "^16.2.0",
+  "eslint-config-next": "^16.2.2",
   "@types/node": "^25",
   "@types/react": "^19",
   "@types/react-dom": "^19",
