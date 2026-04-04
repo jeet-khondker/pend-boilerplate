@@ -9,7 +9,7 @@ The frontend is built with NextJS 16 and provides a modern, performant, and type
 ### Core Technologies
 
 - **NextJS 16** - React Framework with App Router
-- **TypeScript 5** - Type Safety & Developer Experience
+- **TypeScript 6** - Type Safety & Developer Experience
 - **Tailwind CSS v4.2** - Utility-First CSS Framework (PostCSS-Based)
 - **Redux Toolkit** - Centralized State Management
 - **React Hook Form** - Performant Form Handling
@@ -952,7 +952,7 @@ npm run storybook -- --no-manager-cache
   "@types/node": "^25",
   "@types/react": "^19",
   "@types/react-dom": "^19",
-  "typescript": "^5.0.0",
+  "typescript": "^6",
   "storybook": "^10.3.4"
 }
 ```

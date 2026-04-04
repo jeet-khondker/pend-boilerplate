@@ -14,6 +14,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **`eslint-plugin-storybook`** Bumped from `10.3.3` to `10.3.4`.
   - **`eslint-config-next`** Bumped from `16.2.1` to `16.2.2`.
   - **`@storybook/addon-onboarding`** Bumped from `10.3.3` to `10.3.4`.
+  - **`typescript`** Bumped from `5.9.3` to `6.0.2`.
 - **Mobile** :
   - **`expo`** Bumped from `55.0.8` to `55.0.11`.
   - **`@react-navigation/bottom-tabs`** Bumped from `7.15.8` to `7.15.9`.

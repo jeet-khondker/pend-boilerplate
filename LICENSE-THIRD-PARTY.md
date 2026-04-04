@@ -135,7 +135,7 @@ This Document contains the Licenses & Notices for 3rd Party Software Included in
 
 ### TypeScript (Apache License 2.0)
 
-- **Version** : 5.x
+- **Version** : 6.x
 - **Copyright** : Microsoft Corporation
 - **License** : Apache License 2.0
 - **Website** : https://www.typescriptlang.org/
