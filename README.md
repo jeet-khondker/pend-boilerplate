@@ -1116,6 +1116,6 @@ This ensures we stay within GitHub's 10GB limit while maintaining fast build spe
 
 **Built with ❤️ by [@corebit-bd](https://github.com/corebit-bd)**
 
-**Version** : 1.0.12
-**Last Updated** : April 04, 2026  
+**Version** : 1.0.13
+**Last Updated** : April 10, 2026  
 **Status** : Production Ready & Scaffolding Ready ✅
