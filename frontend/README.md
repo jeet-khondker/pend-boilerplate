@@ -927,7 +927,7 @@ npm run storybook -- --no-manager-cache
   "react-redux": "^9.2.0",
   "axios": "^1.15.0",
   "zod": "^4.3.6",
-  "react-hook-form": "^7.71.2",
+  "react-hook-form": "^7.72.1",
   "@hookform/resolvers": "^5.2.2",
   "clsx": "^2.1.1",
   "tailwind-merge": "^3.5.0",
