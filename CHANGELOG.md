@@ -13,6 +13,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **`eslint-config-next`** Bumped from `16.2.2` to `16.2.3`.
   - **`axios`** Bumped from `1.14.0` to `1.15.0`.
   - **`react-dom`** Bumped from `19.2.4` to `19.2.5`.
+  - **`@storybook/addon-vitest`** Bumped from `10.3.3` to `10.3.5`.
 - **Mobile** :
   - **`@react-navigation/stack`** Bumped from `7.8.8` to `7.8.10`.
   - **`react`** Bumped from `19.2.4` to `19.2.5`.
