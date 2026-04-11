@@ -922,7 +922,7 @@ npm run storybook -- --no-manager-cache
 {
   "next": "^16.1.1",
   "react": "^19.2.3",
-  "react-dom": "^19.2.4",
+  "react-dom": "^19.2.5",
   "@reduxjs/toolkit": "^2.9.2",
   "react-redux": "^9.2.0",
   "axios": "^1.15.0",
