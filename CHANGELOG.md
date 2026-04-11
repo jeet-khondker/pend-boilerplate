@@ -16,6 +16,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **`@react-navigation/stack`** Bumped from `7.8.8` to `7.8.10`.
   - **`react`** Bumped from `19.2.4` to `19.2.5`.
   - **`react-hook-form`** Bumped from `7.72.0` to `7.72.1`.
+  - **`expo-secure-store`** Bumped from `55.0.11` to `55.0.13`.
 
 # [1.0.12] - April 04, 2026
 
