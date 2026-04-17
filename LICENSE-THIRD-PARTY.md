@@ -187,7 +187,7 @@ This Document contains the Licenses & Notices for 3rd Party Software Included in
 
 ### Expo (MIT License)
 
-- **Version** : ~55.0.11
+- **Version** : ~55.0.15
 - **Copyright** : Expo Contributors
 - **License** : MIT
 - **Website** : https://expo.dev/
