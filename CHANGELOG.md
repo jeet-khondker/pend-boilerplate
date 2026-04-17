@@ -5,6 +5,13 @@ All Notable Changes to the PEND Boilerplate Project will be Documented in this F
 The Format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+# [1.0.14] - April 18, 2026
+
+### Upgraded
+
+- **Frontend** :
+  - **`eslint`** Bumped from `9.21.0` to `9.39.4`.
+
 # [1.0.13] - April 10, 2026
 
 ### Upgraded
@@ -704,4 +711,4 @@ When using this Boilerplate for Your Projects :
 
 ---
 
-**Status** : ✅ Production Ready | **Version** : 1.0.13 | **Released** : April 10, 2026
+**Status** : ✅ Production Ready | **Version** : 1.0.14 | **Released** : April 18, 2026
