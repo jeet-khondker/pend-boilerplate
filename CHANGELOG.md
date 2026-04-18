@@ -18,6 +18,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **`expo`** Bumped from `55.0.11` to `55.0.15`.
   - **`typescript`** Bumped from `6.0.2` to `6.0.3`.
   - **`axios`** Bumped from `1.14.0` to `1.15.0`.
+  - **`react-native`** Bumped from `0.84.1` to `0.85.1`.
 
 # [1.0.13] - April 10, 2026
 
