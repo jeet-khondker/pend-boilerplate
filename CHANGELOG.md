@@ -16,6 +16,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Mobile** :
   - **`expo`** Bumped from `55.0.11` to `55.0.15`.
   - **`typescript`** Bumped from `6.0.2` to `6.0.3`.
+  - **`axios`** Bumped from `1.14.0` to `1.15.0`.
 
 # [1.0.13] - April 10, 2026
 
