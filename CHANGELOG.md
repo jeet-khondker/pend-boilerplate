@@ -14,6 +14,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **`vitest`** Bumped from `4.1.2` to `4.1.4`.
   - **`typescript`** Bumped from `6.0.2` to `6.0.3`.
   - **`playwright`** Bumped from `1.58.2` to `1.59.1`.
+  - **`@storybook/addon-docs`** Bumped from `10.3.3` to `10.3.5`.
 - **Mobile** :
   - **`expo`** Bumped from `55.0.11` to `55.0.15`.
   - **`typescript`** Bumped from `6.0.2` to `6.0.3`.
