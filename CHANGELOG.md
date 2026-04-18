@@ -12,6 +12,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Frontend** :
   - **`eslint`** Bumped from `9.21.0` to `9.39.4`.
   - **`vitest`** Bumped from `4.1.2` to `4.1.4`.
+  - **`typescript`** Bumped from `6.0.2` to `6.0.3`.
 - **Mobile** :
   - **expo** Bumped from `55.0.11` to `55.0.15`.
 
