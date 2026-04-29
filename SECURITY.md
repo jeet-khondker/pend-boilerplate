@@ -398,7 +398,6 @@ This Security Policy applies to the PEND Boilerplate Project. Implementations & 
 
 ---
 
-**Last Updated** : April 18, 2026  
-**PEND Boilerplate Version** : 1.0.14
+**Last Updated** : April 18, 2026
 
 Thank You for Helping Keep PEND Boilerplate & Our Users Safe! 🙏
