@@ -9,6 +9,8 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Upgraded
 
+- **Frontend** :
+  - **`cypress`** Bumped from `15.13.0` to `15.14.1`.
 - **Mobile** :
   - **`axios`** Bumped from `1.15.0` to `1.15.2`.
 
