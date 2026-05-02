@@ -341,7 +341,7 @@ black . && isort . && flake8 .
 - Django 5.2+ (LTS)
 - djangorestframework 3.16+
 - django-cors-headers 4.9+
-- psycopg2-binary 2.9.11+
+- psycopg2-binary >=2.9.12,<3.0
 - django-environ 0.12.0+
 - drf-yasg 1.21+ (API Documentation)
 - djangorestframework-simplejwt 5.5.1+ (JWT Auth)
@@ -443,11 +443,12 @@ Interactive API Documentation available at :
 - Production : https://api.example.com/swagger/
 
 #### ⚠️ Note on API Filtering & Swagger
-With the upgrade to `django-filter` 25.x, Automatic Schema Generation for `drf-yasg` has been removed by the Package Maintainers. 
+
+With the upgrade to `django-filter` 25.x, Automatic Schema Generation for `drf-yasg` has been removed by the Package Maintainers.
 
 **Impact** : Filter Fields (Query Parameters) may not automatically appear in the Swagger UI.
 
-**Workaround** : To display Filters in Swagger, you must manually define them using the `@swagger_auto_schema` Decorator on your ViewSets : 
+**Workaround** : To display Filters in Swagger, you must manually define them using the `@swagger_auto_schema` Decorator on your ViewSets :
 
 ```python
 @swagger_auto_schema(
@@ -631,7 +632,8 @@ ALLOWED_HOSTS=localhost,127.0.0.1,yourdomain.com
 5. Commit with Conventional Commits: `feature (#Issue Reference, if any) : Created A New Feature`
 6. Push & Create A Pull Request (PR)
 
-### Commit Label Tags Convention 
+### Commit Label Tags Convention
+
 - `feature` : Indication of New Feature or Functionality or a significant enhancement into the system
 - `fix` : Signifies Bug or Error Fixes in the system
 - `documentation` : Changes to the Documentation File(s)
