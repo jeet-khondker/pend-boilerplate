@@ -2,13 +2,13 @@
 
 ## 📋 Overview
 
-The backend is built with Django >=5.2,<6.1 and provides a robust, scalable foundation for the PEND boilerplate. It implements a multi-tenant, headless architecture with support for REST, GraphQL, and FastAPI edge services.
+The backend is built with Django >=6.0.4,<6.1 and provides a robust, scalable foundation for the PEND boilerplate. It implements a multi-tenant, headless architecture with support for REST, GraphQL, and FastAPI edge services.
 
 ## 🏗️ Architecture
 
 ### Core Technologies
 
-- **Django >=5.2,<6.1** - Main Application Framework
+- **Django >=6.0.4,<6.1** - Main Application Framework
 - **Django REST Framework 3.16** - RESTful API
 - **Graphene-Django 3.2.3** - GraphQL API
 - **FastAPI 0.119** - Edge Services for High-Performance Endpoints
@@ -338,7 +338,7 @@ black . && isort . && flake8 .
 
 ### Production Dependencies (requirements.txt)
 
-- Django 5.2+ (LTS)
+- Django >=6.0.4,<6.1 (LTS)
 - djangorestframework 3.16+
 - django-cors-headers 4.9+
 - psycopg2-binary >=2.9.12,<3.0

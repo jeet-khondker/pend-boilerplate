@@ -19,7 +19,7 @@ This Document contains the Licenses & Notices for 3rd Party Software Included in
 
 ### Django (BSD 3-Clause License)
 
-- **Version** : 5.2.x
+- **Version** : >=6.0.4,<6.1
 - **Copyright** : Django Software Foundation & Individual Ccontributors
 - **License** : BSD 3-Clause
 - **Website** : https://www.djangoproject.com/
