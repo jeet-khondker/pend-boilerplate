@@ -349,7 +349,7 @@ black . && isort . && flake8 .
 - graphene-django 3.2.3+
 - fastapi 0.119.0+
 - uvicorn 0.37.0+
-- pydantic 2.12.2+
+- pydantic >=2.13.3,<3.0
 - celery 5.5.3+
 - redis >=5.3.0,<8.0
 - gunicorn >=23.0.0,<26.0
