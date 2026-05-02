@@ -11,6 +11,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Backend** :
   - **`pydantic`** Updated Requirement from `<3.0,>=2.12.2` to `>=2.13.3,<3.0`.
+  - **`pytest-django`** Updated Requirement from `<5.0,>=4.11.1` to `>=4.12.0,<5.0`.
 - **Frontend** :
   - **`cypress`** Bumped from `15.13.0` to `15.14.1`.
   - **`@storybook/addon-a11y`** Bumped from `10.3.3` to `10.3.5`.

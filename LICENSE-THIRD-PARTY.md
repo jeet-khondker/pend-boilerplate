@@ -223,7 +223,7 @@ This Document contains the Licenses & Notices for 3rd Party Software Included in
 
 ### `pytest-django` (BSD 3-Clause License)
 
-- **Version** : 4.11.1+
+- **Version** : >=4.12.0,<5.0
 - **Copyright** : `pytest-django` Contributors
 - **License** : BSD 3-Clause
 - **Website** : https://pytest-django.readthedocs.io/
@@ -475,6 +475,6 @@ For Questions about Licensing in this Project :
 
 ---
 
-**Last Updated** : April 18, 2026
+**Last Updated** : April 24, 2026
 
 For the Main Project License, See [LICENSE](LICENSE) in the Root Directory.

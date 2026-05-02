@@ -6,8 +6,8 @@
 - **Purpose** : Full-Stack Boilerplate Using PostgreSQL-Expo-NextJS-Django Stack
 - **Architecture** : Headless, Multi-Tenant, MicroServices Event-Driven
 - **Current Status** : ✅ COMPLETE - All 12 Steps Finished
-- **Version** : 1.0.14
-- **Last Updated** : April 18, 2026
+- **Version** : 1.0.15
+- **Last Updated** : April 24, 2026
 
 ## 🗂️ Tech Stack
 
@@ -271,7 +271,7 @@ pend-boilerplate/
 **Development (`requirements-dev.txt`)** :
 
 - `pytest` ≥8.4.2,<10
-- `pytest-django` 4.11.1+
+- `pytest-django` >=4.12.0,<5.0
 - `black` 26.1.0+
 - `flake8` 7.3.0+
 - `isort` >=6.1.0,<9.0
