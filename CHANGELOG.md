@@ -11,6 +11,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Frontend** :
   - **`cypress`** Bumped from `15.13.0` to `15.14.1`.
+  - **`@storybook/addon-a11y`** Bumped from `10.3.3` to `10.3.5`.
 - **Mobile** :
   - **`axios`** Bumped from `1.15.0` to `1.15.2`.
   - **`expo-constants`** Bumped from `55.0.14` to `55.0.15`.
