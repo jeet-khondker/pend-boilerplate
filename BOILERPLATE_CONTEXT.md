@@ -13,7 +13,7 @@
 
 ### Backend
 
-- `Django >=5.2,<6.1` with Django REST Framework 3.16
+- `Django >=6.0.4,<6.1` with Django REST Framework 3.16
 - FastAPI 0.119 for Edge Services
 - GraphQL via `Graphene-Django 3.2.3`
 - JWT Authentication with RSA256 (`djangorestframework-simplejwt 5.5.1`)
@@ -257,7 +257,7 @@ pend-boilerplate/
 
 **Production (`requirements.txt`)** :
 
-- `Django` 5.2.x (LTS)
+- `Django` >=6.0.4,<6.1 (LTS)
 - `djangorestframework` 3.16.x
 - `psycopg2-binary` >=2.9.12,<3.0
 - `djangorestframework-simplejwt` 5.5.1+ (RSA256)

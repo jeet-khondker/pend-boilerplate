@@ -90,7 +90,7 @@ This Boilerplate serves as a **Template** for Rapidly Scaffolding New Projects w
 
 ### Backend
 
-- **Django >=5.2,<6.1** - Web Framework
+- **Django >=6.0.4,<6.1** - Web Framework
 - **Django REST Framework 3.16** - RESTful APIs
 - **FastAPI 0.119** - High-Performance Edge Services
 - **Graphene-Django 3.2.3** - GraphQL Implementation
