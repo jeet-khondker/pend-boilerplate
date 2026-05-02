@@ -13,6 +13,7 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - **`cypress`** Bumped from `15.13.0` to `15.14.1`.
 - **Mobile** :
   - **`axios`** Bumped from `1.15.0` to `1.15.2`.
+  - **`expo-constants`** Bumped from `55.0.14` to `55.0.15`.
 
 # [1.0.14] - April 18, 2026
 
