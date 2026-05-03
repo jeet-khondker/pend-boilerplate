@@ -7,8 +7,9 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 # [1.0.16] - May 01, 2026
 
-- **Mobile** : 
+- **Mobile** :
   - **`@react-navigation/stack`** Bumped from `7.8.10` to `7.8.11`.
+  - **`expo`** Bumped from `55.0.15` to `55.0.19`.
 
 # [1.0.15] - April 24, 2026
 
