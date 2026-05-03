@@ -33,7 +33,7 @@
 
 ### Mobile
 
-- React Native with Expo ~55.0.15
+- React Native with Expo 55.0.19
 - Native Navigation & Components
 
 ### Database
