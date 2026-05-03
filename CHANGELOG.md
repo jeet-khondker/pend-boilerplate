@@ -5,6 +5,11 @@ All Notable Changes to the PEND Boilerplate Project will be Documented in this F
 The Format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+# [1.0.16] - May 01, 2026
+
+- **Mobile** : 
+  - **`@react-navigation/stack`** Bumped from `7.8.10` to `7.8.11`.
+
 # [1.0.15] - April 24, 2026
 
 ### Upgraded
@@ -740,4 +745,4 @@ When using this Boilerplate for Your Projects :
 
 ---
 
-**Status** : ✅ Production Ready | **Version** : 1.0.15 | **Released** : April 24, 2026
+**Status** : ✅ Production Ready | **Version** : 1.0.16 | **Released** : May 01, 2026
