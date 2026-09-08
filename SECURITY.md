@@ -359,7 +359,7 @@ When a Security Vulnerability is confirmed :
 ### GitHub Security Features
 
 - [Dependabot](https://github.com/dependabot) - Automated Dependency Updates
-- [Dependabot AI PR Review](.github/workflows/dependabot-auto-merge.yaml) - Gemini `PRReviewerAgent` Approves Dependabot PRs; Maintainers Squash-Merge Manually (`contents: read`, `pull-requests: write`)
+- [Dependabot AI PR Review](.github/workflows/dependabot-auto-merge.yaml) - Gemini `PRReviewerAgent` (powered by `google-genai` Python SDK using `gemini-3.7-flash`) reviews Dependabot PRs; Maintainers Squash-Merge Manually (`contents: read`, `pull-requests: write`)
 - [Code Scanning](https://docs.github.com/en/code-security/code-scanning) - Static Analysis
 - [Secret Scanning](https://docs.github.com/en/code-security/secret-scanning) - Credential Leak Detection
 
@@ -410,6 +410,6 @@ This Security Policy applies to the PEND Boilerplate Project. Implementations & 
 
 ---
 
-**Last Updated** : August 26, 2026
+**Last Updated** : September 07, 2026
 
 Thank You for Helping Keep PEND Boilerplate & Our Users Safe! 🙏

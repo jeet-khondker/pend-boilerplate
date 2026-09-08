@@ -17,7 +17,7 @@ When Dependabot opens a Pull Request (PR) with the prefix `chore/upgrade/`, the 
 
 The `Dependabot AI PR Review & Approve` Workflow (`.github/workflows/dependabot-auto-merge.yaml`) also runs the `review-and-approve` Job :
 
-1. **PRReviewerAgent** (Gemini) Generates a Concise Markdown Review of the Dependabot PR.
+1. **PRReviewerAgent** (powered by the `google-genai` Python SDK using `gemini-3.7-flash`) generates a concise Markdown review of the Dependabot PR.
 2. The Workflow Submits that Review via `gh pr review --approve` (Does **not** Enable Auto-Merge).
 3. Maintainers Verify CI Logs & the AI Review, then **Squash-Merge Manually**.
 

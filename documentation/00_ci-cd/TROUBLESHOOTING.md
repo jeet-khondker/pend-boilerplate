@@ -642,7 +642,7 @@ Dependabot PRs stay Open after the `Dependabot AI PR Review & Approve` Workflow 
 
 Auto-Merge was Removed from `.github/workflows/dependabot-auto-merge.yaml` (Job : `review-and-approve`) so Concurrent Dependabot PRs do not Fail with `GraphQL: Base branch was modified`.
 
-1. Confirm the Workflow Posted the Gemini Review & Marked the PR as Approved.
+1. Confirm the Workflow Posted the Gemini Review (powered by `google-genai` SDK using `gemini-3.7-flash`) & Marked the PR as Approved.
 2. Confirm CI Checks on the Dependabot PR are Passing.
 3. Squash-Merge the PR Manually.
 
