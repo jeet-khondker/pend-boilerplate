@@ -177,6 +177,7 @@ pend-boilerplate/
 - ✅ GitHub Actions CI / CD Pipeline
   - `.github/workflows/ci.yml` - Hybrid Testing Strategy (Cost-Optimized)
   - `.github/workflows/cd.yml` - Automated Deployments
+  - `.github/workflows/dependabot-auto-merge.yaml` - Dependabot AI PR Review & Approve (No Auto-Merge; `contents: read`)
   - Upgrade Validation for Special Branches
 - ✅ Pull Request Template
   - `.github/PULL_REQUEST_TEMPLATE.md` - With Branch Naming Convention
@@ -536,6 +537,23 @@ NODE_ENV=development
 - Automatic Warning Comments on Upgrade PRs
 - Coverage Reporting to Codecov
 - Security Results to GitHub Security Tab
+
+### Dependabot AI PR Review (`dependabot-auto-merge.yaml`)
+
+**Workflow Name** : `Dependabot AI PR Review & Approve`
+
+**Triggers** : `pull_request_target` (`opened`, `synchronized`, `reopened`) when the Author is `dependabot[bot]`
+
+**Permissions** :
+
+- `contents: read` (Least Privilege; Write Access to Repository Contents is not Required)
+- `pull-requests: write` (Submit the AI Review & Approve the PR)
+
+**Job** : `review-and-approve`
+
+- Generates a Markdown Review via `PRReviewerAgent` (Gemini)
+- Submits `gh pr review --approve --body-file review_comment.md`
+- Does **not** run `gh pr merge --squash --auto` (Maintainers Squash-Merge after Verifying CI)
 
 ### Continuous Deployment (`cd.yaml`)
 
@@ -1002,8 +1020,8 @@ This Document contains All Necessary Context to Resume Development!
 ---
 
 **Project Status** : ✅ COMPLETE - Production & Scaffolding Ready
-**Version** : 1.0.35
-**Last Updated** : September 04, 2026
+**Version** : 1.0.36
+**Last Updated** : September 07, 2026
 **All 12 Steps** : COMPLETED ✅ (Infrastructure & AITDDLC / IDD Harness Integrated v1.0.33)
 **CI / CD** : Production-Ready ✅
 **Documentation** : Comprehensive ✅

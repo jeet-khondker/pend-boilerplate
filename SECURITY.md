@@ -359,6 +359,7 @@ When a Security Vulnerability is confirmed :
 ### GitHub Security Features
 
 - [Dependabot](https://github.com/dependabot) - Automated Dependency Updates
+- [Dependabot AI PR Review](.github/workflows/dependabot-auto-merge.yaml) - Gemini `PRReviewerAgent` Approves Dependabot PRs; Maintainers Squash-Merge Manually (`contents: read`, `pull-requests: write`)
 - [Code Scanning](https://docs.github.com/en/code-security/code-scanning) - Static Analysis
 - [Secret Scanning](https://docs.github.com/en/code-security/secret-scanning) - Credential Leak Detection
 
@@ -388,6 +389,7 @@ For Non-Security Questions :
 - **v1.0** (December 30, 2025) - Initial Security Policy
 - **v1.1** (January 12, 2026) - Added Infrastructure Availability Patterns (CI / CD Cache Optimization).
 - **v1.2** (August 26, 2026) - Integrated AITDDLC Test Harness Security Controls & IDD Issue Tracking Auditing.
+- **v1.3** (September 07, 2026) - Scoped Dependabot AI Review Workflow Permissions (`contents: read`); Disabled Dependabot Auto-Merge in favor of Manual Squash-Merge after AI Approval.
 
 ---
 
