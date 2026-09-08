@@ -292,6 +292,15 @@ This Document contains the Licenses & Notices for 3rd Party Software Included in
 - **Website** : https://openai.com/ / https://www.anthropic.com/
 - **Reference** : Standard Developer API Terms
 
+### `google-genai` (Apache License 2.0)
+
+- **Usage Context** : AI PR Reviewer Agent in GitHub Actions (`dependabot-auto-merge.yaml`)
+- **Version** : Latest
+- **Copyright** : Google LLC
+- **License** : Apache License 2.0
+- **Website** : https://github.com/googleapis/python-genai
+- **License URL** : https://github.com/googleapis/python-genai/blob/main/LICENSE
+
 ---
 
 ## Infrastructure & DevOps
@@ -490,6 +499,6 @@ For Questions about Licensing in this Project :
 
 ---
 
-**Last Updated** : September 04, 2026
+**Last Updated** : September 07, 2026
 
 For the Main Project License, See [LICENSE](LICENSE) in the Root Directory.

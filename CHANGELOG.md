@@ -7,6 +7,19 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+# [1.0.36] - September 07, 2026
+
+### Changed
+
+- **CI / CD Pipeline** : 
+  - Refactored `.github/workflows/dependabot-auto-merge.yaml` (Workflow Name : `Dependabot AI PR Review & Approve`).
+  - Removed the `gh pr merge "$PR_URL" --squash --auto` Step so Dependabot PRs are no longer Auto-Merged (Avoids Concurrent `GraphQL: Base branch was modified` Conflicts).
+  - Renamed the Job from `auto-merge-review` to `review-and-approve`.
+  - Scoped `permissions.contents` from `write` to `read` (Least Privilege; Repository Contents Write Access is no longer Required).
+  - The Workflow still runs `PRReviewerAgent` (Gemini), Posts the Markdown Review Comment, and Approves the PR for Manual Verification & Squash-Merge.
+
+---
+
 # [1.0.35] - September 04, 2026
 
 ### Upgraded
@@ -1200,4 +1213,4 @@ When using this Boilerplate for Your Projects :
 
 ---
 
-**Status** : ✅ Production Ready | **Version** : 1.0.35 | **Released** : September 04, 2026
+**Status** : ✅ Production Ready | **Version** : 1.0.36 | **Released** : September 07, 2026

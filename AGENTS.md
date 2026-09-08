@@ -4,7 +4,7 @@
 
 1. **SpecificationGeneratorAgent** - Handles administrative prompt generation and specification document creation.
 2. **CodebaseWatcherAgent** - Watches local creation events, generates unit tests/Storybook specifications and runs local self-healing execution loops.
-3. **PRReviewerAgent** - Analyzes Dependabot PRs in CI and writes structured AI approval reviews.
+3. **PRReviewerAgent** - Analyzes Dependabot PRs in CI, writes structured AI approval reviews, and submits an approving GitHub review. Auto-merge is disabled; maintainers verify CI and squash-merge manually.
 4. **DocumentationMaintainerAgent** - Keeps system documentation, READMEs and `AGENTS.md` guidelines synchronized upon package updates.
 
 ---

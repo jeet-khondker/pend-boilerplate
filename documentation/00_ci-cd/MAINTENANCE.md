@@ -15,6 +15,14 @@ Maintenance is triggered by 2 Events :
 
 When Dependabot opens a Pull Request (PR) with the prefix `chore/upgrade/`, the `upgrade-validation` Job in `ci.yaml` will trigger.
 
+The `Dependabot AI PR Review & Approve` Workflow (`.github/workflows/dependabot-auto-merge.yaml`) also runs the `review-and-approve` Job :
+
+1. **PRReviewerAgent** (Gemini) Generates a Concise Markdown Review of the Dependabot PR.
+2. The Workflow Submits that Review via `gh pr review --approve` (Does **not** Enable Auto-Merge).
+3. Maintainers Verify CI Logs & the AI Review, then **Squash-Merge Manually**.
+
+**Why Auto-Merge was Disabled** : Concurrent Dependabot PRs previously Scheduled Squash Auto-Merge (`gh pr merge --squash --auto`) and hit `GraphQL: Base branch was modified` when the Base Branch Advanced. The Workflow now uses Least-Privilege Permissions (`contents: read`, `pull-requests: write`) because Repository Contents Write Access is no longer Required.
+
 #### Step A : Satisfy the "Safety Lock"
 
 The CI will fail by default until a Backup Branch exists.
@@ -133,4 +141,4 @@ If an Upgrade causes a Critical Failure :
 ---
 
 **Current Maintenance Status** : `Optimized (AITDDLC & IDD Integrated)`
-**Last Audit** : August 26, 2026
+**Last Audit** : September 07, 2026

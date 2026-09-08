@@ -12,13 +12,14 @@ Before running the CI / CD Pipelines, you need to configure GitHub Secrets. Thes
 
 The PEND Stack Boilerplate requires 3 Mandatory Secrets for Full CI / CD Functionality :
 
-| Secret Name               | Purpose                        | Required For | Priority                      |
-| ------------------------- | ------------------------------ | ------------ | ----------------------------- |
-| `CODECOV_TOKEN`           | Upload Test Coverage Reports   | CI Pipeline  | 🟡 Optional                   |
-| `CHROMATIC_PROJECT_TOKEN` | Deploy Storybook for UI Review | CI Pipeline  | 🟡 Optional                   |
-| `EXPO_TOKEN`              | Build Mobile Applications      | CI Pipeline  | 🔴 Required (If Using Mobile) |
+| Secret Name               | Purpose                                              | Required For                         | Priority                      |
+| ------------------------- | ---------------------------------------------------- | ------------------------------------ | ----------------------------- |
+| `CODECOV_TOKEN`           | Upload Test Coverage Reports                         | CI Pipeline                          | 🟡 Optional                   |
+| `CHROMATIC_PROJECT_TOKEN` | Deploy Storybook for UI Review                       | CI Pipeline                          | 🟡 Optional                   |
+| `EXPO_TOKEN`              | Build Mobile Applications                            | CI Pipeline                          | 🔴 Required (If Using Mobile) |
+| `GEMINI_API_KEY`          | Google Gen AI for `PRReviewerAgent` Dependabot Reviews | Dependabot AI PR Review & Approve | 🔴 Required (Dependabot PRs)  |
 
-**Note** : `GITHUB_TOKEN` is Automatically Provided by GitHub Actions - **Do Not Add it Manually**.
+**Note** : `GITHUB_TOKEN` is Automatically Provided by GitHub Actions - **Do Not Add it Manually**. The Dependabot Review Workflow uses it with `contents: read` & `pull-requests: write` (It Approves PRs; It does **not** Auto-Merge).
 
 ---
 
@@ -448,8 +449,9 @@ After Setting Up Secrets:
 
 ### Workflow Files
 
-- CI Pipeline : `.github/workflows/ci.yml` (Includes Storage-Optimized Layered Caching)
-- CD Pipeline : `.github/workflows/cd.yml`
+- CI Pipeline : `.github/workflows/ci.yaml` (Includes Storage-Optimized Layered Caching)
+- CD Pipeline : `.github/workflows/cd.yaml`
+- Dependabot AI PR Review & Approve : `.github/workflows/dependabot-auto-merge.yaml` (`contents: read`, `pull-requests: write`; Uses `GEMINI_API_KEY`; No Auto-Merge)
 
 ### Secret Names (Copy-Paste Ready)
 
@@ -457,6 +459,7 @@ After Setting Up Secrets:
 CODECOV_TOKEN
 CHROMATIC_PROJECT_TOKEN
 EXPO_TOKEN
+GEMINI_API_KEY
 ```
 
 ### Provider URLs
@@ -485,4 +488,4 @@ EXPO_TOKEN
 
 **🎉 Once Secrets are Configured, Your CI / CD Pipeline is Ready to Run 🚀**
 
-**Last Updated** : August 26, 2026
+**Last Updated** : September 07, 2026

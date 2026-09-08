@@ -966,6 +966,11 @@ prodEnv: 2-3 Approvals (CODEOWNERS Enforced)
    - Verify Backup Branch Exists
    - Warn about Major Version Changes
 
+9. **Dependabot AI Review** (Dependabot PRs Only)
+   - `PRReviewerAgent` Posts a Gemini Markdown Review & Approves the PR
+   - Auto-Merge is Disabled; Maintainers Verify CI then Squash-Merge Manually
+   - Workflow Token is Scoped to `contents: read` & `pull-requests: write`
+
 ### Continuous Deployment (CD)
 
 **Triggers** : Push to `devEnv`, `stagingEnv`, `prodEnv` | Version Tags
@@ -1315,6 +1320,6 @@ This ensures we stay within GitHub's 10GB limit while maintaining fast build spe
 
 **Built with ❤️ by [@corebit-bd](https://github.com/corebit-bd)**
 
-**Version** : 1.0.35
-**Last Updated** : September 04, 2026  
+**Version** : 1.0.36
+**Last Updated** : September 07, 2026  
 **Status** : Production Ready & Scaffolding Ready ✅

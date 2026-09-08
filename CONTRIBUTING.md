@@ -1586,6 +1586,7 @@ EXPO_TOKEN=xxx              # Mobile Builds
 # Review & Update :
 .github/workflows/ci.yml    # Continuous Integration
 .github/workflows/cd.yml    # Continuous Deployment
+.github/workflows/dependabot-auto-merge.yaml  # Dependabot AI Review & Approve (No Auto-Merge)
 
 # Adjust for Your Needs:
 # - Test Coverage Thresholds
@@ -1752,5 +1753,5 @@ This Boilerplate provides a Solid Foundation for Your Next Project. Follow these
 
 **Questions?** Check the Documentation / Open an Issue.
 
-**Last Updated** : August 28, 2026
+**Last Updated** : September 07, 2026
 **Maintainer** : Jeet Z. H. Khondker

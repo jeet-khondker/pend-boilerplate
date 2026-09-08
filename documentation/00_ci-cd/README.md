@@ -10,6 +10,7 @@ Production-Ready Continuous Integration (CI) / Continuous Deployment (CD) Pipeli
 - ✅ **CD Pipeline** : Automated Deployment to Development / Staging / Production Environments
 - ✅ Cost Optimization : Hybrid Strategy & Layered Caching (10GB Limit Management)
 - ✅ **Security Scans** : Trivy, `npm audit`, Safety Checks
+- ✅ **Dependabot AI Review** : Gemini `PRReviewerAgent` Approves Dependabot PRs; Maintainers Squash-Merge Manually (No Auto-Merge)
 - ✅ **Multiple Quality Gates** : 7 Validation Points before Production Deployment
 
 ---
@@ -67,6 +68,8 @@ Go To : GitHub → Create PR to `main` → **CI Runs Automatically!**
 | [GITHUB_SECRETS_SETUP.md](./GITHUB_SECRETS_SETUP.md) | Complete Secrets Configuration Guide |
 | [STRATEGY.md](./STRATEGY.md)                         | Testing Strategy & Cost Optimization |
 | [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)           | Common Issues & Solutions            |
+| [MAINTENANCE.md](./MAINTENANCE.md)                   | Dependabot Handling & Upgrade Loop   |
+| [UPGRADE_GUIDE.md](./UPGRADE_GUIDE.md)               | Major Version Upgrade Procedures     |
 
 ---
 
@@ -275,8 +278,11 @@ on:
 
 ### Workflow Files
 
-- `.github/workflows/ci.yml` - Continuous Integration
-- `.github/workflows/cd.yml` - Continuous Deployment
+- `.github/workflows/ci.yaml` - Continuous Integration
+- `.github/workflows/cd.yaml` - Continuous Deployment
+- `.github/workflows/branch-cascade.yaml` - Automated Environment Branch Cascade
+- `.github/workflows/dependabot-ai-fixer.yaml` - Dependabot CI Self-Healing
+- `.github/workflows/dependabot-auto-merge.yaml` - Dependabot AI PR Review & Approve (`review-and-approve`; No Auto-Merge; `contents: read`)
 
 ---
 
@@ -331,6 +337,7 @@ Every Code Change Passes through Multiple Validation Points :
 - [GitHub Secrets Setup](./GITHUB_SECRETS_SETUP.md)
 - [Testing Strategy](./STRATEGY.md)
 - [Troubleshooting](./TROUBLESHOOTING.md)
+- [Maintenance Guide](./MAINTENANCE.md)
 - [Contributing Guidelines](../../CONTRIBUTING.md)
 - [Pull Request Template](../../.github/PULL_REQUEST_TEMPLATE.md)
 
@@ -374,5 +381,5 @@ See [TROUBLESHOOTING.md](./TROUBLESHOOTING.md)
 
 ---
 
-**Last Updated** : August 26, 2026
+**Last Updated** : September 07, 2026
 **Status** : Production-Ready (AITDDLC & IDD Integrated) ✅
