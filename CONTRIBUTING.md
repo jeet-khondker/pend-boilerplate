@@ -99,7 +99,7 @@ We strictly enforce **Issue-Driven Development (IDD)** combined with **Artificia
 
 1. **Issue-Driven Development (IDD)** : No code is written / merged without an associated GitHub Issue defining the User Story, Acceptance Criteria & SCRUM Sprint Assignment.
 2. **AITDDLC Workflow** :  
-   - **Specification & Harness Phase** :  Generate/write formal Specifications & automated Unit / Integration Test Harnesses first using AI assistance.
+   - **Specification & Harness Phase** :  Generate / Write formal Specifications (including mandatory Mermaid syntax diagrams for `documentation/01_*` & `documentation/02_*` Documents) & automated Unit / Integration Test Harnesses first using AI assistance.
    - **Red Phase** : Execute Tests to confirm failure before writing functional logic.
    - **Green Phase** : Write minimal production code to pass the Tests.
    - **Refactor Phase** : Optimize, clean, & format code with AI Review while maintaining 100% Test Pass rates.
@@ -498,6 +498,7 @@ prodEnv: 2-3 Approvals (CODEOWNERS Enforced)
    - Linked GitHub Issue using `Closes #<issue-number>` / `Fixes #<issue-number>` (IDD Compliance)
    - Verified local Execution of AITDDLC Red-Green-Refactor Test Cycle
    - Documented any AI-assisted code / generated Test Suites.
+   - Verified inclusion of Mermaid syntax diagrams in any new or modified specification documents (`documentation/01_*` & `documentation/02_*`).
 
 4. **Request Reviewers** (If Team) :
    - Tag Appropriate Team Members
@@ -1269,6 +1270,8 @@ export function UserProfile({ userId, onUpdate }: UserProfileProps) {
 - ❌ Ignore Linter Warnings
 - ❌ Skip Error Handling
 - ❌ Write Tests After the Fact
+
+> **AI Engine & SDK Standard** : All AI PR Reviewers & Automation Agents in CI / CD Pipelines must strictly utilize the `google-genai` Python SDK & execute using `gemini-3.7-flash` as the default model alias.
 
 ## Testing Requirements
 

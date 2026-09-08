@@ -17,7 +17,7 @@ The PEND Stack Boilerplate requires 3 Mandatory Secrets for Full CI / CD Functio
 | `CODECOV_TOKEN`           | Upload Test Coverage Reports                         | CI Pipeline                          | 🟡 Optional                   |
 | `CHROMATIC_PROJECT_TOKEN` | Deploy Storybook for UI Review                       | CI Pipeline                          | 🟡 Optional                   |
 | `EXPO_TOKEN`              | Build Mobile Applications                            | CI Pipeline                          | 🔴 Required (If Using Mobile) |
-| `GEMINI_API_KEY`          | Google Gen AI for `PRReviewerAgent` Dependabot Reviews | Dependabot AI PR Review & Approve | 🔴 Required (Dependabot PRs)  |
+| `GEMINI_API_KEY` | Google Gen AI (`google-genai` SDK / `gemini-3.7-flash`) for `PRReviewerAgent` Dependabot Reviews | Dependabot AI PR Review & Approve | 🔴 Required (Dependabot PRs) |
 
 **Note** : `GITHUB_TOKEN` is Automatically Provided by GitHub Actions - **Do Not Add it Manually**. The Dependabot Review Workflow uses it with `contents: read` & `pull-requests: write` (It Approves PRs; It does **not** Auto-Merge).
 
@@ -451,7 +451,7 @@ After Setting Up Secrets:
 
 - CI Pipeline : `.github/workflows/ci.yaml` (Includes Storage-Optimized Layered Caching)
 - CD Pipeline : `.github/workflows/cd.yaml`
-- Dependabot AI PR Review & Approve : `.github/workflows/dependabot-auto-merge.yaml` (`contents: read`, `pull-requests: write`; Uses `GEMINI_API_KEY`; No Auto-Merge)
+- Dependabot AI PR Review & Approve : `.github/workflows/dependabot-auto-merge.yaml` (`contents: read`, `pull-requests: write`; Uses `GEMINI_API_KEY` via `google-genai` SDK with `gemini-3.7-flash`; No Auto-Merge)
 
 ### Secret Names (Copy-Paste Ready)
 

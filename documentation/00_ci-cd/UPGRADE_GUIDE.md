@@ -815,7 +815,7 @@ Copy this for Each Upgrade :
 4. Deploy on Morning Mornings / Friday Afternoons
 5. Ignore Deprecation Warnings
 6. Delete Backup Branches Prematurely
-7. Auto-Merge Upgrade PRs (Dependabot Workflow Approves via `PRReviewerAgent` only; Squash-Merge Manually after CI Passes)
+7. Auto-Merge Upgrade PRs (Dependabot Workflow Approves via `PRReviewerAgent` powered by `google-genai` SDK using `gemini-3.7-flash` only; Squash-Merge Manually after CI Passes)
 8. Ignore **Approaching Storage Limit** Warnings; Manually Delete Old Branch Caches to maintain Free Tier Compliance.
 
 ---

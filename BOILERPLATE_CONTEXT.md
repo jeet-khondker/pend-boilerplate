@@ -58,7 +58,7 @@
 - Backend : `pytest >=9.1.0,<10.0`, `pytest-django >=4.14.0,<5.0`
 - Frontend : Jest, `@testing-library/react` (99.78% Coverage)
 - Code Quality : Black, Flake8, `isort`, ESLint
-- AI Test Harness : Configured AITDDLC Engine in `.mcp/harness/` enforcing Red-Green-Refactor Phases via Cursor / MCP Integration
+- AI Test Harness : Configured AITDDLC Engine in `.mcp/harness/` enforcing Red-Green-Refactor Phases via Cursor / MCP Integration & requiring Mermaid Syntax Diagrams for Specification Documents in `documentation/01_*` and `documentation/02_*`.
 
 ## ✅ All Steps Completed (1-12)
 
@@ -551,7 +551,7 @@ NODE_ENV=development
 
 **Job** : `review-and-approve`
 
-- Generates a Markdown Review via `PRReviewerAgent` (Gemini)
+- Generates a Markdown Review via `PRReviewerAgent` using the `google-genai` SDK (*Default Model* : `gemini-3.7-flash`)
 - Submits `gh pr review --approve --body-file review_comment.md`
 - Does **not** run `gh pr merge --squash --auto` (Maintainers Squash-Merge after Verifying CI)
 

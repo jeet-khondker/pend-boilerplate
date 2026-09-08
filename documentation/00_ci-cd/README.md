@@ -10,7 +10,7 @@ Production-Ready Continuous Integration (CI) / Continuous Deployment (CD) Pipeli
 - ✅ **CD Pipeline** : Automated Deployment to Development / Staging / Production Environments
 - ✅ Cost Optimization : Hybrid Strategy & Layered Caching (10GB Limit Management)
 - ✅ **Security Scans** : Trivy, `npm audit`, Safety Checks
-- ✅ **Dependabot AI Review** : Gemini `PRReviewerAgent` Approves Dependabot PRs; Maintainers Squash-Merge Manually (No Auto-Merge)
+- ✅ **Dependabot AI Review** : Gemini `PRReviewerAgent` (powered by `google-genai` SDK using `gemini-3.7-flash`) reviews Dependabot PRs; Maintainers Squash-Merge Manually (No Auto-Merge)
 - ✅ **Multiple Quality Gates** : 7 Validation Points before Production Deployment
 
 ---

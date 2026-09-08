@@ -336,7 +336,7 @@ Every Code Change Passes Through **Minimum 7 Quality Gates** :
 
 ```
 Gate 0 : Local AITDDLC Harness → Red-Green-Refactor Passed Locally ✅
-Gate 1 : PR to main → CI : Full Tests + Dependabot AI Review & Approval ✅
+GGate 1 : PR to main → CI : Full Tests + Dependabot AI Review & Approval (via `google-genai` SDK / `gemini-3.7-flash`) ✅
 Gate 2 : Merge to main → CI : Full Tests ✅
 Gate 3 : Merge to devEnv → CD : Deploy + Smoke Tests ✅
 Gate 4 : PR to stagingEnv → CI : Essential Tests ✅

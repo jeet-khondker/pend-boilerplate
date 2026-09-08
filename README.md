@@ -554,9 +554,10 @@ flowchart TD
 
 The repository leverages automated AI agents (`.mcp/harness/`) to drive code development via a strict test-first methodology:
 
-1. **RED Phase (Test First):** AI generates or updates unit and integration tests based on issue specifications before business logic is written.
-2. **GREEN Phase (Implementation):** Core code is developed to satisfy the newly generated tests until all suite checks pass.
-3. **REFACTOR Phase (Optimization):** Code is refactored for performance, adherence to architecture patterns, and security, accompanied by automated docstring and `AGENTS.md` updates.
+1. **Specification & Harness Phase** : Architectural specifications generated in `documentation/01_*` and `documentation/02_*` must include mandatory **Mermaid syntax diagrams** to visually depict flows and system structure before implementation.
+2. **RED Phase (Test First)** : Automated AI harnesses generate or update unit and integration test suites based on Issue Specifications before Business Logic is written, establishing failing tests.
+3. **GREEN Phase (Implementation)** : Core code is developed to satisfy the newly generated tests until all suite checks pass successfully.
+4. **REFACTOR Phase (Optimization)** : Code is refactored for Performance, Architecture Patterns & Security, accompanied by automated docstring and `AGENTS.md` updates while maintaining 100% Test Pass rates.
 
 ---
 
@@ -967,9 +968,10 @@ prodEnv: 2-3 Approvals (CODEOWNERS Enforced)
    - Warn about Major Version Changes
 
 9. **Dependabot AI Review** (Dependabot PRs Only)
-   - `PRReviewerAgent` Posts a Gemini Markdown Review & Approves the PR
-   - Auto-Merge is Disabled; Maintainers Verify CI then Squash-Merge Manually
-   - Workflow Token is Scoped to `contents: read` & `pull-requests: write`
+   - Powered by the **`google-genai`** Python SDK using **`gemini-3.7-flash`** as the default model engine.
+   - `PRReviewerAgent` executes an automated Security & Code Quality Review, posting a Gemini Markdown Review directly to the PR.
+   - Auto-merge is disabled; Maintainers verify CI Execution & manually perform a squash-merge.
+   - Workflow token is strictly scoped to `contents: read` & `pull-requests: write`.
 
 ### Continuous Deployment (CD)
 

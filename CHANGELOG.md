@@ -17,6 +17,12 @@ and this Project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Renamed the Job from `auto-merge-review` to `review-and-approve`.
   - Scoped `permissions.contents` from `write` to `read` (Least Privilege; Repository Contents Write Access is no longer Required).
   - The Workflow still runs `PRReviewerAgent` (Gemini), Posts the Markdown Review Comment, and Approves the PR for Manual Verification & Squash-Merge.
+  - Standardized the `PRReviewerAgent` execution engine to use the `google-genai` Python SDK with `gemini-3.7-flash` as the default model alias.
+
+### Added
+
+- **Methodology & AI Architecture** : 
+  - **AITDDLC Harness** : Configured AI-Assisted Test-Driven Development Life-Cycle (`.mcp/harness/`) enforcing Red-Green-Refactor Development Pipelines and mandatory Mermaid syntax diagrams for Specification Documents (`documentation/01_*` and `documentation/02_*`).
 
 ---
 
